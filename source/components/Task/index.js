@@ -23,26 +23,49 @@ export default class Task extends PureComponent {
         message,
     });
 
+    _removeTask = () => {
+        const { id, _removeTask } = this.props;
+
+        _removeTask(id);
+    }
+
     render () {
         return (
             <li className = { Styles.task }>
                 <div className = { Styles.content }>
-                    <div className = {Styles.toggleTaskCompletedState}>
-                        <Checkbox />
-                    </div>
-                    <input disabled maxLength = '50' type = 'text'
-                            value = 'Qwerty' />
+                    <Checkbox
+                        inlineBlock
+                        className = { Styles.toggleTaskFavoriteState }
+                        color1 = '#3B8EF3'
+                        color2 = '#fff'
+                    />
+                    <input
+                        disabled
+                        maxLength = '50'
+                        type = 'text'
+                        value = { this.props.message }
+                    />
                 </div>
                 <div className = { Styles.actions }>
-                    <div className = { Styles.toggleTaskFavoriteState }>
-                        <Star />
-                    </div>
-                    <div className = { Styles.updateTaskMessageOnClick }>
-                        <Edit />
-                    </div>
-                    <div style = { { width: '17px', height: '17px'} }>
-                        <Remove />
-                    </div>
+                    <Star
+                        inlineBlock
+                        className = { Styles.toggleTaskFavoriteState }
+                        color1 = '#3B8EF3'
+                        color2 = '#000'
+                    />
+                    <Edit
+                        inlineBlock
+                        className = { Styles.updateTaskMessageOnClick }
+                        color1 = '#3B8EF3'
+                        color2 = '#000'
+                    />
+                    <Remove
+                        inlineBlock
+                        className = { Styles.removeTask }
+                        color1 = '#3B8EF3'
+                        color2 = '#000'
+                        onClick = { this._removeTask }
+                    />
                 </div>
             </li>
         );
