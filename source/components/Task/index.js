@@ -12,10 +12,14 @@ import Styles from './styles.m.css';
 
 export default class Task extends PureComponent {
 
-    state = {
-        // ...this._getTaskShape(),
-        // ...this.props,
-        inputIsDisabled: true,
+    constructor (props) {
+        super(props);
+        const taskProps = this._getTaskShape(props);
+
+        this.state = {
+            ...taskProps,
+            inputIsDisabled: true,
+        };
     }
 
     _getTaskShape = ({
@@ -63,7 +67,6 @@ export default class Task extends PureComponent {
     };
 
     _handleInputDoubleClick = () => {
-        console.log('_handleInputDoubleClick triggered');
         if (this.state.inputIsDisabled) {
             this.setState(({ inputIsDisabled }) => ({
                 inputIsDisabled: !inputIsDisabled,
@@ -80,7 +83,9 @@ export default class Task extends PureComponent {
     }
 
     _saveTask = () => {
-        console.log('task to save', this.state);
+        const taskState = this._getTaskShape(this.state);
+
+        console.log('task to save', taskState);
         // TODO: make API call to save task
     }
 
@@ -104,15 +109,18 @@ export default class Task extends PureComponent {
                         color2 = '#fff'
                         // onClick = { this._handleTaskCompletedStateChange }
                     />
-                    <input
-                        defaultValue = { message }
-                        disabled = { inputIsDisabled }
-                        maxLength = '50'
-                        type = 'text'
-                        onChange = { this._handleTaskMessageChange }
-                        onDoubleClick = { this._handleInputDoubleClick }
-                        onKeyPress = { this._handleInputKeyPress }
-                    />
+                    {/* Обертка вокруг дизебленого инпута, для активации по дабл клику */}
+                    <div
+                        onDoubleClick = { this._handleInputDoubleClick }>
+                        <input
+                            defaultValue = { message }
+                            disabled = { inputIsDisabled }
+                            maxLength = '50'
+                            type = 'text'
+                            onChange = { this._handleTaskMessageChange }
+                            onKeyPress = { this._handleInputKeyPress }
+                        />
+                    </div>
                 </div>
                 <div className = { Styles.actions }>
                     <Star
