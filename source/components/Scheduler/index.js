@@ -1,12 +1,15 @@
 // Core
 import React, { Component } from 'react';
 
+// Components
+import Task from '../Task';
+import Checkbox from '../../theme/assets/Checkbox';
+
 // Instruments
 import Styles from './styles.m.css';
 import { api } from '../../REST'; // ! Импорт модуля API должен иметь именно такой вид (import { api } from '../../REST')
-import Task from '../Task';
-import Checkbox from '../../theme/assets/Checkbox';
 import { BaseTaskModel } from '../../instruments';
+import { v4 } from 'uuid';
 
 export default class Scheduler extends Component {
 
@@ -14,29 +17,29 @@ export default class Scheduler extends Component {
         taskMessage: '',
         tasks: [
             {
-                id:        '12313434234',
+                id:        v4(),
                 completed: false,
                 favorite:  false,
-                message:   'Сделать дз'
+                message:   'Сделать дз',
             },
             {
-                id:        '12313434243',
+                id:        v4(),
                 completed: false,
                 favorite:  false,
                 message:   'Купить молоко',
             },
             {
-                id:        '12313434278',
+                id:        v4(),
                 completed: false,
                 favorite:  false,
-                message:   'Позвонить маме'
+                message:   'Позвонить маме',
             }
         ],
     }
 
     _createTask = () => {
         const { taskMessage } = this.state;
-        const newTask = new BaseTaskModel(undefined, undefined, undefined, taskMessage);
+        const newTask = new BaseTaskModel(v4(), false, false, taskMessage);
 
         this.setState(({ tasks }) => ({
             taskMessage: '',
@@ -77,7 +80,11 @@ export default class Scheduler extends Component {
                 <main>
                     <header>
                         <h1>Планировщик задач</h1>
-                        <input placeholder = 'Поиск' type = 'search' />
+                        <input
+                            placeholder = 'Поиск'
+                            type = 'search'
+
+                        />
                     </header>
                     <section>
                         <form

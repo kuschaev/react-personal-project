@@ -11,6 +11,13 @@ import Remove from '../../theme/assets/Remove';
 import Styles from './styles.m.css';
 
 export default class Task extends PureComponent {
+
+    state = {
+        // ...this._getTaskShape(),
+        // ...this.props,
+        inputIsDisabled: true,
+    }
+
     _getTaskShape = ({
         id = this.props.id,
         completed = this.props.completed,
@@ -23,6 +30,60 @@ export default class Task extends PureComponent {
         message,
     });
 
+    _handleTaskCompletedStateChange = () => {
+        this.setState(({ completed }) => ({
+            completed: !completed,
+        }));
+        this._saveTask();
+    }
+
+    _handleTaskFavoriteStateChange = () => {
+        this.setState(({ favorite }) => ({
+            favorite: !favorite,
+        }));
+        this._saveTask();
+    }
+
+    _handleTaskMessageChange = (event) => {
+        this.setState({
+            message: event.target.value,
+        });
+    }
+
+    // TODO: handle clicks w/o message change
+    _handleTaskMessageUpdate = () => {
+        // Saving task if user pressed edit again
+        if (!this.state.inputIsDisabled) {
+            this._saveTask();
+        }
+
+        this.setState(({ inputIsDisabled }) => ({
+            inputIsDisabled: !inputIsDisabled,
+        }));
+    };
+
+    _handleInputDoubleClick = () => {
+        console.log('_handleInputDoubleClick triggered');
+        if (this.state.inputIsDisabled) {
+            this.setState(({ inputIsDisabled }) => ({
+                inputIsDisabled: !inputIsDisabled,
+            }));
+        }
+    }
+
+    _handleInputKeyPress = (event) => {
+        const enterKeyPressed = event.key === 'Enter' || event.keyCode === 13;
+
+        if (enterKeyPressed) {
+            this._handleTaskMessageUpdate();
+        }
+    }
+
+    _saveTask = () => {
+        console.log('task to save', this.state);
+        // TODO: make API call to save task
+    }
+
     _removeTask = () => {
         const { id, _removeTask } = this.props;
 
@@ -30,20 +91,27 @@ export default class Task extends PureComponent {
     }
 
     render () {
+        const { inputIsDisabled } = this.state;
+        const { completed, favorite, message } = this.props;
+
         return (
             <li className = { Styles.task }>
                 <div className = { Styles.content }>
                     <Checkbox
                         inlineBlock
-                        className = { Styles.toggleTaskFavoriteState }
+                        className = { Styles.toggleTaskCompletedState }
                         color1 = '#3B8EF3'
                         color2 = '#fff'
+                        // onClick = { this._handleTaskCompletedStateChange }
                     />
                     <input
-                        disabled
+                        defaultValue = { message }
+                        disabled = { inputIsDisabled }
                         maxLength = '50'
                         type = 'text'
-                        value = { this.props.message }
+                        onChange = { this._handleTaskMessageChange }
+                        onDoubleClick = { this._handleInputDoubleClick }
+                        onKeyPress = { this._handleInputKeyPress }
                     />
                 </div>
                 <div className = { Styles.actions }>
@@ -52,12 +120,14 @@ export default class Task extends PureComponent {
                         className = { Styles.toggleTaskFavoriteState }
                         color1 = '#3B8EF3'
                         color2 = '#000'
+                        // onClick = { this._handleTaskFavoriteStateChange }
                     />
                     <Edit
                         inlineBlock
                         className = { Styles.updateTaskMessageOnClick }
                         color1 = '#3B8EF3'
                         color2 = '#000'
+                        onClick = { this._handleTaskMessageUpdate }
                     />
                     <Remove
                         inlineBlock
