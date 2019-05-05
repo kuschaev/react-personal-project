@@ -20,6 +20,7 @@ export default class Task extends PureComponent {
             ...taskProps,
             inputIsDisabled: true,
         };
+        console.log(this.state);
     }
 
     _getTaskShape = ({
@@ -37,15 +38,13 @@ export default class Task extends PureComponent {
     _handleTaskCompletedStateChange = () => {
         this.setState(({ completed }) => ({
             completed: !completed,
-        }));
-        this._saveTask();
+        }), this._saveTask);
     }
 
     _handleTaskFavoriteStateChange = () => {
         this.setState(({ favorite }) => ({
             favorite: !favorite,
-        }));
-        this._saveTask();
+        }), this._saveTask);
     }
 
     _handleTaskMessageChange = (event) => {
@@ -54,32 +53,42 @@ export default class Task extends PureComponent {
         });
     }
 
-    // TODO: handle clicks w/o message change
     _handleTaskMessageUpdate = () => {
-        // Saving task if user pressed edit again
-        if (!this.state.inputIsDisabled) {
-            this._saveTask();
-        }
+        // A fallback option in case of esc press
+        this.savedMessage = this.state.message;
 
         this.setState(({ inputIsDisabled }) => ({
             inputIsDisabled: !inputIsDisabled,
-        }));
+        }), this._setTaskInputFocus);
     };
 
     _handleInputDoubleClick = () => {
         if (this.state.inputIsDisabled) {
+            this._handleTaskMessageUpdate();
+        }
+    }
+
+    _handleInputKeyDown = (event) => {
+        const enterKeyPressed = event.key === 'Enter' || event.keyCode === 13;
+        const escapeKeyPressed = event.key === 'Escape' || event.keyCode === 27;
+
+        if (enterKeyPressed) {
             this.setState(({ inputIsDisabled }) => ({
+                inputIsDisabled: !inputIsDisabled,
+            }));
+            this._saveTask();
+        }
+
+        if (escapeKeyPressed) {
+            this.setState(({ inputIsDisabled }) => ({
+                message:         this.savedMessage,
                 inputIsDisabled: !inputIsDisabled,
             }));
         }
     }
 
-    _handleInputKeyPress = (event) => {
-        const enterKeyPressed = event.key === 'Enter' || event.keyCode === 13;
-
-        if (enterKeyPressed) {
-            this._handleTaskMessageUpdate();
-        }
+    _setTaskInputFocus = () => {
+        this.taskInput.focus();
     }
 
     _saveTask = () => {
@@ -96,39 +105,41 @@ export default class Task extends PureComponent {
     }
 
     render () {
-        const { inputIsDisabled } = this.state;
-        const { completed, favorite, message } = this.props;
+        const { completed, favorite, message, inputIsDisabled } = this.state;
 
         return (
             <li className = { Styles.task }>
                 <div className = { Styles.content }>
                     <Checkbox
                         inlineBlock
+                        checked = { completed }
                         className = { Styles.toggleTaskCompletedState }
                         color1 = '#3B8EF3'
                         color2 = '#fff'
-                        // onClick = { this._handleTaskCompletedStateChange }
+                        onClick = { this._handleTaskCompletedStateChange }
                     />
                     {/* Обертка вокруг дизебленого инпута, для активации по дабл клику */}
                     <div
                         onDoubleClick = { this._handleInputDoubleClick }>
                         <input
-                            defaultValue = { message }
                             disabled = { inputIsDisabled }
                             maxLength = '50'
+                            ref = { (input) => { this.taskInput = input; } }
                             type = 'text'
+                            value = { message }
                             onChange = { this._handleTaskMessageChange }
-                            onKeyPress = { this._handleInputKeyPress }
+                            onKeyDown = { this._handleInputKeyDown }
                         />
                     </div>
                 </div>
                 <div className = { Styles.actions }>
                     <Star
                         inlineBlock
+                        checked = { favorite }
                         className = { Styles.toggleTaskFavoriteState }
                         color1 = '#3B8EF3'
                         color2 = '#000'
-                        // onClick = { this._handleTaskFavoriteStateChange }
+                        onClick = { this._handleTaskFavoriteStateChange }
                     />
                     <Edit
                         inlineBlock

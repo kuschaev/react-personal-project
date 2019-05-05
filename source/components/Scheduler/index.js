@@ -39,12 +39,18 @@ export default class Scheduler extends Component {
 
     _createTask = () => {
         const { taskMessage } = this.state;
-        const newTask = new BaseTaskModel(v4(), false, false, taskMessage);
 
-        this.setState(({ tasks }) => ({
-            taskMessage: '',
-            tasks: [newTask, ...tasks],
-        }));
+        // TODO: a more complex check
+        if (taskMessage !== '') {
+            const newTask = new BaseTaskModel(v4(), false, false, taskMessage);
+
+            // TODO: save with API call
+            this.setState(({ tasks }) => ({
+                taskMessage: '',
+                tasks:       [newTask, ...tasks],
+            }));
+
+        }
     }
 
     _removeTask = (id) => {
