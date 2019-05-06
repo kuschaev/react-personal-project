@@ -37,25 +37,63 @@ export default class Scheduler extends Component {
         ],
     }
 
-    _createTask = () => {
+    componentDidMount () {
+        this._fetchTasks();
+    }
+
+    _fetchTasks = async () => {
+        // TODO: set spinner on action
+        const response = await fetch(api.url, {
+            method:  'GET',
+            headers: {
+                'Authorization': api.token,
+            },
+        });
+
+        const { data: tasks } = await response.json();
+
+        this.setState({ tasks });
+    }
+
+    _createTask = async () => {
+        // TODO: set spinner on action
         const { taskMessage } = this.state;
 
         // TODO: a more complex check
         if (taskMessage !== '') {
             const newTask = new BaseTaskModel(v4(), false, false, taskMessage);
 
-            // TODO: save with API call
+            const response = await fetch(api.url, {
+                method:  'POST',
+                headers: {
+                    'Content-Type':  'application/json',
+                    'Authorization': api.token,
+                },
+                body: JSON.stringify(newTask),
+            });
+
+            const { data: task } = await response.json();
+
             this.setState(({ tasks }) => ({
                 taskMessage: '',
-                tasks:       [newTask, ...tasks],
+                tasks:       [task, ...tasks],
             }));
-
         }
     }
 
-    _removeTask = (id) => {
-        this.setState((oldState) => ({
-            tasks: oldState.tasks.filter(task => task.id !== id)
+    _removeTask = async (id) => {
+        // TODO: set spinner on action
+        const deleteUrl = `${api.url}/${id}`;
+
+        await fetch(deleteUrl, {
+            method:  'DELETE',
+            headers: {
+                'Authorization': api.token,
+            },
+        });
+
+        this.setState(({ tasks }) => ({
+            tasks: tasks.filter(task => task.id !== id)
         }));
     }
 
