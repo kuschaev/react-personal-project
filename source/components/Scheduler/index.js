@@ -9,34 +9,15 @@ import Checkbox from '../../theme/assets/Checkbox';
 // Instruments
 import Styles from './styles.m.css';
 import { api } from '../../REST'; // ! Импорт модуля API должен иметь именно такой вид (import { api } from '../../REST')
-import { BaseTaskModel } from '../../instruments';
+import { BaseTaskModel, sortTasksByGroup } from '../../instruments';
 import { v4 } from 'uuid';
 
 export default class Scheduler extends Component {
 
     state = {
         operationInProgress: false,
-        taskMessage: '',
-        tasks: [
-            {
-                id:        v4(),
-                completed: false,
-                favorite:  false,
-                message:   'Сделать дз',
-            },
-            {
-                id:        v4(),
-                completed: false,
-                favorite:  false,
-                message:   'Купить молоко',
-            },
-            {
-                id:        v4(),
-                completed: false,
-                favorite:  false,
-                message:   'Позвонить маме',
-            }
-        ],
+        taskMessage:         '',
+        tasks:               [],
     }
 
     componentDidMount () {
@@ -57,12 +38,11 @@ export default class Scheduler extends Component {
             this._setOperationInProgress(true);
 
             const newTask = new BaseTaskModel(v4(), false, false, taskMessage);
-
             const task = await api.createTask(newTask);
 
             this.setState(({ tasks }) => ({
                 taskMessage: '',
-                tasks:       [task, ...tasks],
+                tasks:       sortTasksByGroup([task, ...tasks]),
             }));
 
             this._setOperationInProgress(false);
@@ -74,7 +54,9 @@ export default class Scheduler extends Component {
 
         const tasks = await api.fetchTasks();
 
-        this.setState({ tasks });
+        this.setState({
+            tasks: sortTasksByGroup(tasks),
+        });
 
         this._setOperationInProgress(false);
     }
@@ -82,12 +64,16 @@ export default class Scheduler extends Component {
     _updateTask = async (task) => {
         this._setOperationInProgress(true);
 
-        const updTask = await api.updateTask(task);
+        const updatedTask = await api.updateTask(task);
 
-        this.setState(({ tasks }) => ({
-            taskMessage: '',
-            tasks:       [...tasks],
-        }));
+        this.setState(({ tasks }) => {
+            const updatedTaskList = tasks.map(task => updatedTask.find(ut => ut.id === task.id) || task);
+
+            return {
+                taskMessage: '',
+                tasks:       sortTasksByGroup(updatedTaskList),
+            };
+        });
 
         this._setOperationInProgress(false);
     }

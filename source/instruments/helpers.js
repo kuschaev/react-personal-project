@@ -1,3 +1,4 @@
+/* eslint-disable max-params */
 // Core
 import moment from 'moment';
 import { v4 } from 'uuid';
@@ -50,10 +51,12 @@ export class BaseTaskModel {
         completed = false,
         favorite = false,
         message = 'Выполнить важную задачу (создано в конструкторе).',
+        created = moment(),
     ) {
         this.id = id;
         this.completed = completed;
         this.favorite = favorite;
         this.message = message;
+        this.created = created;
     }
 }
