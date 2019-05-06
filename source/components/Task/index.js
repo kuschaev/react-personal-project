@@ -20,7 +20,6 @@ export default class Task extends PureComponent {
             ...taskProps,
             inputIsDisabled: true,
         };
-        console.log(this.state);
     }
 
     _getTaskShape = ({
@@ -35,16 +34,16 @@ export default class Task extends PureComponent {
         message,
     });
 
-    _handleTaskCompletedStateChange = () => {
+    _toggleTaskCompletedState = () => {
         this.setState(({ completed }) => ({
             completed: !completed,
-        }), this._saveTask);
+        }), this._updateTask);
     }
 
     _handleTaskFavoriteStateChange = () => {
         this.setState(({ favorite }) => ({
             favorite: !favorite,
-        }), this._saveTask);
+        }), this._updateTask);
     }
 
     _handleTaskMessageChange = (event) => {
@@ -53,7 +52,7 @@ export default class Task extends PureComponent {
         });
     }
 
-    _handleTaskMessageUpdate = () => {
+    _setTaskEditingState = () => {
         // A fallback option in case of esc press
         this.savedMessage = this.state.message;
 
@@ -64,7 +63,7 @@ export default class Task extends PureComponent {
 
     _handleInputDoubleClick = () => {
         if (this.state.inputIsDisabled) {
-            this._handleTaskMessageUpdate();
+            this._setTaskEditingState();
         }
     }
 
@@ -76,7 +75,7 @@ export default class Task extends PureComponent {
             this.setState(({ inputIsDisabled }) => ({
                 inputIsDisabled: !inputIsDisabled,
             }));
-            this._saveTask();
+            this._updateTask();
         }
 
         if (escapeKeyPressed) {
@@ -91,11 +90,11 @@ export default class Task extends PureComponent {
         this.taskInput.focus();
     }
 
-    _saveTask = () => {
+    _updateTask = () => {
         const taskState = this._getTaskShape(this.state);
+        const { _updateTask } = this.props;
 
-        console.log('task to save', taskState);
-        // TODO: make API call to save task
+        _updateTask([taskState]);
     }
 
     _removeTask = () => {
@@ -108,7 +107,8 @@ export default class Task extends PureComponent {
         const { completed, favorite, message, inputIsDisabled } = this.state;
 
         return (
-            <li className = { Styles.task }>
+            <li
+                className = { completed ? `${Styles.task} ${Styles.completed}` : Styles.task }>
                 <div className = { Styles.content }>
                     <Checkbox
                         inlineBlock
@@ -116,7 +116,7 @@ export default class Task extends PureComponent {
                         className = { Styles.toggleTaskCompletedState }
                         color1 = '#3B8EF3'
                         color2 = '#fff'
-                        onClick = { this._handleTaskCompletedStateChange }
+                        onClick = { this._toggleTaskCompletedState }
                     />
                     {/* Обертка вокруг дизебленого инпута, для активации по дабл клику */}
                     <div
@@ -146,7 +146,7 @@ export default class Task extends PureComponent {
                         className = { Styles.updateTaskMessageOnClick }
                         color1 = '#3B8EF3'
                         color2 = '#000'
-                        onClick = { this._handleTaskMessageUpdate }
+                        onClick = { this._setTaskEditingState }
                     />
                     <Remove
                         inlineBlock
