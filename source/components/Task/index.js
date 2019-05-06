@@ -53,12 +53,25 @@ export default class Task extends PureComponent {
     }
 
     _setTaskEditingState = () => {
-        // A fallback option in case of esc press
-        this.savedMessage = this.state.message;
+        const disabled = this.state.inputIsDisabled;
 
-        this.setState(({ inputIsDisabled }) => ({
-            inputIsDisabled: !inputIsDisabled,
-        }), this._setTaskInputFocus);
+        // A fallback option in case of esc press
+        // or second task edit toggle
+        if (disabled) {
+            this.savedMessage = this.state.message;
+        }
+        this.setState(({ inputIsDisabled }) => {
+            if (!inputIsDisabled) {
+                return {
+                    inputIsDisabled: !inputIsDisabled,
+                    message:         this.savedMessage,
+                };
+            }
+
+            return {
+                inputIsDisabled: !inputIsDisabled,
+            };
+        }, this._setTaskInputFocus);
     };
 
     _handleInputDoubleClick = () => {
