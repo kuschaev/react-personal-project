@@ -5,8 +5,8 @@ export const api = {
         const response = await fetch(MAIN_URL, {
             method:  'POST',
             headers: {
-                'Content-Type':  'application/json',
-                'Authorization': TOKEN,
+                'Content-Type': 'application/json',
+                Authorization:  TOKEN,
             },
             body: JSON.stringify(newTask),
         });
@@ -18,7 +18,7 @@ export const api = {
         const response = await fetch(MAIN_URL, {
             method:  'GET',
             headers: {
-                'Authorization': TOKEN,
+                Authorization: TOKEN,
             },
         });
         const { data: tasks } = await response.json();
@@ -29,8 +29,8 @@ export const api = {
         const response = await fetch(MAIN_URL, {
             method:  'PUT',
             headers: {
-                'Content-Type':  'application/json',
-                'Authorization': TOKEN,
+                'Content-Type': 'application/json',
+                Authorization:  TOKEN,
             },
             body: JSON.stringify(oldTask),
         });
@@ -44,9 +44,22 @@ export const api = {
         await fetch(deleteUrl, {
             method:  'DELETE',
             headers: {
-                'Authorization': TOKEN,
+                Authorization: TOKEN,
             },
         });
     },
-    completeAllTasks: async () => {},
+    completeAllTasks: async (oldTasks) => {
+        const response = await fetch(MAIN_URL, {
+            method:  'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization:  TOKEN,
+            },
+            body: JSON.stringify(oldTasks),
+        });
+        // TODO: theoretically must be done via Promise.all
+        const { data: tasks } = await response.json();
+
+        return tasks;
+    },
 };

@@ -51,7 +51,7 @@ export class BaseTaskModel {
         completed = false,
         favorite = false,
         message = 'Выполнить важную задачу (создано в конструкторе).',
-        created = moment(),
+        created = moment()
     ) {
         this.id = id;
         this.completed = completed;

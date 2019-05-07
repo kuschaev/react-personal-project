@@ -13,12 +13,11 @@ import { BaseTaskModel, sortTasksByGroup } from '../../instruments';
 import { v4 } from 'uuid';
 
 export default class Scheduler extends Component {
-
     state = {
         operationInProgress: false,
         taskMessage:         '',
         tasks:               [],
-    }
+    };
 
     componentDidMount () {
         this._fetchTasks();
@@ -28,7 +27,7 @@ export default class Scheduler extends Component {
         this.setState({
             operationInProgress: state,
         });
-    }
+    };
 
     _createTask = async () => {
         const { taskMessage } = this.state;
@@ -47,7 +46,7 @@ export default class Scheduler extends Component {
 
             this._setOperationInProgress(false);
         }
-    }
+    };
 
     _fetchTasks = async () => {
         this._setOperationInProgress(true);
@@ -59,7 +58,7 @@ export default class Scheduler extends Component {
         });
 
         this._setOperationInProgress(false);
-    }
+    };
 
     _updateTask = async (task) => {
         this._setOperationInProgress(true);
@@ -67,7 +66,10 @@ export default class Scheduler extends Component {
         const updatedTask = await api.updateTask(task);
 
         this.setState(({ tasks }) => {
-            const updatedTaskList = tasks.map(task => updatedTask.find(ut => ut.id === task.id) || task);
+            const updatedTaskList = tasks.map(
+                (currTask) =>
+                    updatedTask.find((ut) => ut.id === currTask.id) || currTask
+            );
 
             return {
                 taskMessage: '',
@@ -76,7 +78,7 @@ export default class Scheduler extends Component {
         });
 
         this._setOperationInProgress(false);
-    }
+    };
 
     _removeTask = async (id) => {
         this._setOperationInProgress(true);
@@ -84,24 +86,45 @@ export default class Scheduler extends Component {
         await api.removeTask(id);
 
         this.setState(({ tasks }) => ({
-            tasks: tasks.filter(task => task.id !== id),
+            tasks: tasks.filter((task) => task.id !== id),
         }));
 
         this._setOperationInProgress(false);
-    }
+    };
+
+    _completeAllTasks = async () => {
+        this._setOperationInProgress(true);
+        const { tasks } = this.state;
+
+        tasks.forEach((task) => task.completed = true);
+        // A very dirty hack
+        // TODO: this must be done the React way, via lifecycle methods
+        this.setState({ tasks: []});
+
+        const updatedTasks = await api.completeAllTasks(tasks);
+
+        this.setState({
+            tasks: sortTasksByGroup(updatedTasks),
+        });
+
+        this._setOperationInProgress(false);
+    };
 
     _handleInputChange = (event) => {
         this.setState({
             taskMessage: event.target.value,
         });
-    }
+    };
 
     _handleFormSubmit = (event) => {
         event.preventDefault();
-    }
+    };
 
     render () {
         const { tasks, taskMessage, operationInProgress } = this.state;
+
+        // console.log('tasks from render', tasks);
+
         const tasksJSX = tasks.map((task) => {
             return (
                 <Task
@@ -120,15 +143,10 @@ export default class Scheduler extends Component {
                     <main>
                         <header>
                             <h1>Планировщик задач</h1>
-                            <input
-                                placeholder = 'Поиск'
-                                type = 'search'
-
-                            />
+                            <input placeholder = 'Поиск' type = 'search' />
                         </header>
                         <section>
-                            <form
-                                onSubmit = { this._handleFormSubmit }>
+                            <form onSubmit = { this._handleFormSubmit }>
                                 <input
                                     maxLength = '50'
                                     placeholder = 'Описание новой задачи'
@@ -136,15 +154,14 @@ export default class Scheduler extends Component {
                                     value = { taskMessage }
                                     onChange = { this._handleInputChange }
                                 />
-                                <button
-                                    onClick = { this._createTask }>
+                                <button onClick = { this._createTask }>
                                     Добавить задачу
                                 </button>
                             </form>
                             <div>
                                 <ul>
                                     {/* <div style = { { position: 'relative' } }> */}
-                                    { tasksJSX }
+                                    {tasksJSX}
                                     {/* </div> */}
                                 </ul>
                             </div>
@@ -152,9 +169,15 @@ export default class Scheduler extends Component {
                         <footer>
                             <Checkbox
                                 inlineBlock
+                                checked = {
+                                    !tasks.some(
+                                        (task) => task.completed === false
+                                    )
+                                }
                                 className = { Styles.toggleTaskFavoriteState }
                                 color1 = '#000'
                                 color2 = '#fff'
+                                onClick = { this._completeAllTasks }
                             />
                             <span className = { Styles.completeAllTasks }>
                                 Все задачи выполнены
