@@ -35,7 +35,8 @@
                 background-image: url('../../theme/assets/search-icon.svg');
                 background-repeat: no-repeat;
                 background-size: 18px 18px;
-                background-position: 95% 50%;
+                background-position: 5% 50%;
+                padding-left: 5%;
             }
         }
 

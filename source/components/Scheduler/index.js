@@ -117,7 +117,7 @@ export default class Scheduler extends Component {
         });
     };
 
-    _handleSearchInputChange = (event) => {
+    _updateTasksFilter = (event) => {
         const findString = event.target.value;
 
         this.setState({
@@ -165,7 +165,7 @@ export default class Scheduler extends Component {
                                 placeholder = 'Поиск'
                                 type = 'search'
                                 value = { findString }
-                                onChange = { this._handleSearchInputChange }
+                                onChange = { this._updateTasksFilter }
                             />
                         </header>
                         <section>
