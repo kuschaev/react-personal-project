@@ -15,6 +15,7 @@ import { v4 } from 'uuid';
 export default class Scheduler extends Component {
     state = {
         operationInProgress: false,
+        findString:          '',
         taskMessage:         '',
         tasks:               [],
     };
@@ -116,16 +117,33 @@ export default class Scheduler extends Component {
         });
     };
 
+    _handleSearchInputChange = (event) => {
+        const findString = event.target.value;
+
+        this.setState({
+            findString,
+        });
+    };
+
     _handleFormSubmit = (event) => {
         event.preventDefault();
     };
 
     render () {
-        const { tasks, taskMessage, operationInProgress } = this.state;
+        const {
+            tasks,
+            taskMessage,
+            operationInProgress,
+            findString,
+        } = this.state;
 
         // console.log('tasks from render', tasks);
 
-        const tasksJSX = tasks.map((task) => {
+        const filteredTasks = tasks.filter((task) =>
+            task.message.toLowerCase().includes(findString.toLowerCase())
+        );
+
+        const tasksJSX = filteredTasks.map((task) => {
             return (
                 <Task
                     key = { task.id }
@@ -143,7 +161,12 @@ export default class Scheduler extends Component {
                     <main>
                         <header>
                             <h1>Планировщик задач</h1>
-                            <input placeholder = 'Поиск' type = 'search' />
+                            <input
+                                placeholder = 'Поиск'
+                                type = 'search'
+                                value = { findString }
+                                onChange = { this._handleSearchInputChange }
+                            />
                         </header>
                         <section>
                             <form onSubmit = { this._handleFormSubmit }>
