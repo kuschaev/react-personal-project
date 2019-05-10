@@ -14,19 +14,19 @@ import { v4 } from 'uuid';
 
 export default class Scheduler extends Component {
     state = {
-        operationInProgress: false,
-        findString:          '',
-        taskMessage:         '',
-        tasks:               [],
+        isTasksFetching: false,
+        tasksFilter:     '',
+        taskMessage:     '',
+        tasks:           [],
     };
 
     componentDidMount () {
         this._fetchTasks();
     }
 
-    _setOperationInProgress = (state) => {
+    _setTasksFetchingState = (state) => {
         this.setState({
-            operationInProgress: state,
+            isTasksFetching: state,
         });
     };
 
@@ -35,7 +35,7 @@ export default class Scheduler extends Component {
 
         // TODO: a more complex check
         if (taskMessage !== '') {
-            this._setOperationInProgress(true);
+            this._setTasksFetchingState(true);
 
             const newTask = new BaseTaskModel(v4(), false, false, taskMessage);
             const task = await api.createTask(newTask);
@@ -45,12 +45,12 @@ export default class Scheduler extends Component {
                 tasks:       sortTasksByGroup([task, ...tasks]),
             }));
 
-            this._setOperationInProgress(false);
+            this._setTasksFetchingState(false);
         }
     };
 
     _fetchTasks = async () => {
-        this._setOperationInProgress(true);
+        this._setTasksFetchingState(true);
 
         const tasks = await api.fetchTasks();
 
@@ -58,11 +58,11 @@ export default class Scheduler extends Component {
             tasks: sortTasksByGroup(tasks),
         });
 
-        this._setOperationInProgress(false);
+        this._setTasksFetchingState(false);
     };
 
-    _updateTask = async (task) => {
-        this._setOperationInProgress(true);
+    _updateTaskAsync = async (task) => {
+        this._setTasksFetchingState(true);
 
         const updatedTask = await api.updateTask(task);
 
@@ -78,11 +78,11 @@ export default class Scheduler extends Component {
             };
         });
 
-        this._setOperationInProgress(false);
+        this._setTasksFetchingState(false);
     };
 
-    _removeTask = async (id) => {
-        this._setOperationInProgress(true);
+    _removeTaskAsync = async (id) => {
+        this._setTasksFetchingState(true);
 
         await api.removeTask(id);
 
@@ -90,25 +90,30 @@ export default class Scheduler extends Component {
             tasks: tasks.filter((task) => task.id !== id),
         }));
 
-        this._setOperationInProgress(false);
+        this._setTasksFetchingState(false);
     };
 
     _completeAllTasks = async () => {
-        this._setOperationInProgress(true);
+        this._setTasksFetchingState(true);
         const { tasks } = this.state;
 
-        tasks.forEach((task) => task.completed = true);
-        // A very dirty hack
-        // TODO: this must be done the React way, via lifecycle methods
-        this.setState({ tasks: []});
+        const uncompletedTasks = tasks.filter(
+            (task) => task.completed === false
+        );
 
-        const updatedTasks = await api.completeAllTasks(tasks);
+        uncompletedTasks.forEach((task) => task.completed = true);
+
+        const updatedTasks = await api.completeAllTasks(uncompletedTasks);
+        const updatedTaskList = tasks.map(
+            (currTask) =>
+                updatedTasks.find((ut) => ut.id === currTask.id) || currTask
+        );
 
         this.setState({
-            tasks: sortTasksByGroup(updatedTasks),
+            tasks: sortTasksByGroup(updatedTaskList),
         });
 
-        this._setOperationInProgress(false);
+        this._setTasksFetchingState(false);
     };
 
     _handleInputChange = (event) => {
@@ -118,10 +123,10 @@ export default class Scheduler extends Component {
     };
 
     _updateTasksFilter = (event) => {
-        const findString = event.target.value;
+        const tasksFilter = event.target.value;
 
         this.setState({
-            findString,
+            tasksFilter,
         });
     };
 
@@ -130,17 +135,12 @@ export default class Scheduler extends Component {
     };
 
     render () {
-        const {
-            tasks,
-            taskMessage,
-            operationInProgress,
-            findString,
-        } = this.state;
+        const { tasks, taskMessage, isTasksFetching, tasksFilter } = this.state;
 
         // console.log('tasks from render', tasks);
 
         const filteredTasks = tasks.filter((task) =>
-            task.message.toLowerCase().includes(findString.toLowerCase())
+            task.message.toLowerCase().includes(tasksFilter.toLowerCase())
         );
 
         const tasksJSX = filteredTasks.map((task) => {
@@ -148,15 +148,15 @@ export default class Scheduler extends Component {
                 <Task
                     key = { task.id }
                     { ...task }
-                    _removeTask = { this._removeTask }
-                    _updateTask = { this._updateTask }
+                    _removeTaskAsync = { this._removeTaskAsync }
+                    _updateTaskAsync = { this._updateTaskAsync }
                 />
             );
         });
 
         return (
             <>
-                <Spinner isSpinning = { operationInProgress } />
+                <Spinner isSpinning = { isTasksFetching } />
                 <section className = { Styles.scheduler }>
                     <main>
                         <header>
@@ -164,7 +164,7 @@ export default class Scheduler extends Component {
                             <input
                                 placeholder = 'Поиск'
                                 type = 'search'
-                                value = { findString }
+                                value = { tasksFilter }
                                 onChange = { this._updateTasksFilter }
                             />
                         </header>

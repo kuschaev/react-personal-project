@@ -13,32 +13,12 @@ import Styles from './styles.m.css';
 export default class Task extends PureComponent {
     constructor (props) {
         super(props);
-        const taskProps = this._getTaskShape(props);
 
         this.state = {
-            ...taskProps,
-            inputIsDisabled: true,
+            isTaskEditing:  false,
+            newTaskMessage: props.message,
         };
     }
-
-    // A known anti-pattern
-    // componentDidUpdate (props) {
-    //     console.log('cdu with', props);
-    //     this.setState({ ...props });
-    // }
-
-    // static getDerivedStateFromProps (newProps, oldState) {
-    //     console.log('newProps', newProps);
-    //     console.log('oldState', oldState);
-
-    //     if (newProps.completed !== oldState.completed) {
-    //         return {
-    //             completed: newProps.completed,
-    //         };
-    //     }
-
-    //     return null;
-    // }
 
     _getTaskShape = ({
         id = this.props.id,
@@ -54,71 +34,72 @@ export default class Task extends PureComponent {
 
     _toggleTaskCompletedState = () => {
         this.setState(
-            ({ completed }) => ({
+            (state, { completed }) => ({
                 completed: !completed,
             }),
-            this._updateTask
+            this._updateTaskAsync
         );
     };
 
     _toggleTaskFavoriteState = () => {
         this.setState(
-            ({ favorite }) => ({
+            (state, { favorite }) => ({
                 favorite: !favorite,
             }),
-            this._updateTask
+            this._updateTaskAsync
         );
     };
 
     _handleTaskMessageChange = (event) => {
         this.setState({
-            message: event.target.value,
+            newTaskMessage: event.target.value,
         });
     };
 
     _setTaskEditingState = () => {
         // A fallback option in case of esc press
         // or second task edit toggle
-        if (this.state.inputIsDisabled) {
-            this.savedMessage = this.state.message;
+        if (!this.state.isTaskEditing) {
+            this.savedMessage = this.props.message;
         }
-        this.setState(({ inputIsDisabled }) => {
-            if (!inputIsDisabled) {
+        this.setState(({ isTaskEditing }) => {
+            if (isTaskEditing) {
                 return {
-                    inputIsDisabled: !inputIsDisabled,
-                    message:         this.savedMessage,
+                    isTaskEditing:  !isTaskEditing,
+                    newTaskMessage: this.savedMessage,
                 };
             }
 
             return {
-                inputIsDisabled: !inputIsDisabled,
+                isTaskEditing: !isTaskEditing,
             };
         }, this._setTaskInputFocus);
     };
 
     _handleInputDoubleClick = () => {
-        if (this.state.inputIsDisabled) {
+        if (!this.state.isTaskEditing) {
             this._setTaskEditingState();
         }
     };
 
-    _updateTaskMessageOnKeyDown = (event) => {
+    _updateTaskAsyncMessageOnKeyDown = (event) => {
         const enterKeyPressed = event.key === 'Enter' || event.keyCode === 13;
         const escapeKeyPressed = event.key === 'Escape' || event.keyCode === 27;
 
         if (enterKeyPressed) {
             this.setState(
-                ({ inputIsDisabled }) => ({
-                    inputIsDisabled: !inputIsDisabled,
+                ({ isTaskEditing, newTaskMessage }) => ({
+                    message:       newTaskMessage,
+                    isTaskEditing: !isTaskEditing,
                 }),
-                this._updateTask
+                this._updateTaskAsync
             );
         }
 
         if (escapeKeyPressed) {
-            this.setState(({ inputIsDisabled }) => ({
-                message:         this.savedMessage,
-                inputIsDisabled: !inputIsDisabled,
+            this.setState(({ isTaskEditing }) => ({
+                newTaskMessage: this.savedMessage,
+                isTaskEditing:  !isTaskEditing,
             }));
         }
     };
@@ -127,28 +108,22 @@ export default class Task extends PureComponent {
         this.taskInput.focus();
     };
 
-    _updateTask = () => {
+    _updateTaskAsync = () => {
         const taskState = this._getTaskShape(this.state);
-        const { _updateTask } = this.props;
+        const { _updateTaskAsync } = this.props;
 
-        _updateTask([taskState]);
+        _updateTaskAsync([taskState]);
     };
 
-    _removeTask = () => {
-        const { id, _removeTask } = this.props;
+    _removeTaskAsync = () => {
+        const { id, _removeTaskAsync } = this.props;
 
-        _removeTask(id);
+        _removeTaskAsync(id);
     };
-
-    // WTF block
-    _updateNewTaskMessage = () => {};
-    _updateTaskMessageOnClick = () => {};
-    _cancelUpdatingTaskMessage = () => {};
 
     render () {
-        const { completed, favorite, message, inputIsDisabled } = this.state;
-
-        // console.log('task state from render', this.state);
+        const { completed, favorite } = this.props;
+        const { isTaskEditing, newTaskMessage } = this.state;
 
         return (
             <li
@@ -169,15 +144,15 @@ export default class Task extends PureComponent {
                     {/* Обертка вокруг дизебленого инпута, для активации по дабл клику */}
                     <div onDoubleClick = { this._handleInputDoubleClick }>
                         <input
-                            disabled = { inputIsDisabled }
+                            disabled = { !isTaskEditing }
                             maxLength = '50'
                             ref = { (input) => {
                                 this.taskInput = input;
                             } }
                             type = 'text'
-                            value = { message }
+                            value = { newTaskMessage }
                             onChange = { this._handleTaskMessageChange }
-                            onKeyDown = { this._updateTaskMessageOnKeyDown }
+                            onKeyDown = { this._updateTaskAsyncMessageOnKeyDown }
                         />
                     </div>
                 </div>
@@ -202,7 +177,7 @@ export default class Task extends PureComponent {
                         className = { Styles.removeTask }
                         color1 = '#3B8EF3'
                         color2 = '#000'
-                        onClick = { this._removeTask }
+                        onClick = { this._removeTaskAsync }
                     />
                 </div>
             </li>
