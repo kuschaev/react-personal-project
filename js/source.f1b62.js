@@ -5443,7 +5443,7 @@ class Task_Task extends react["PureComponent"] {
         completed
       }) => ({
         completed: !completed
-      }), this._updateTaskAsync);
+      }), this._updateTask);
     };
 
     this._toggleTaskFavoriteState = () => {
@@ -5451,10 +5451,10 @@ class Task_Task extends react["PureComponent"] {
         favorite
       }) => ({
         favorite: !favorite
-      }), this._updateTaskAsync);
+      }), this._updateTask);
     };
 
-    this._handleTaskMessageChange = event => {
+    this._updateNewTaskMessage = event => {
       this.setState({
         newTaskMessage: event.target.value
       });
@@ -5489,7 +5489,7 @@ class Task_Task extends react["PureComponent"] {
       }
     };
 
-    this._updateTaskAsyncMessageOnKeyDown = event => {
+    this._updateTaskMessageOnKeyDown = event => {
       const enterKeyPressed = event.key === 'Enter' || event.keyCode === 13;
       const escapeKeyPressed = event.key === 'Escape' || event.keyCode === 27;
 
@@ -5500,24 +5500,30 @@ class Task_Task extends react["PureComponent"] {
         }) => ({
           message: newTaskMessage,
           isTaskEditing: !isTaskEditing
-        }), this._updateTaskAsync);
+        }), this._updateTask);
       }
 
       if (escapeKeyPressed) {
-        this.setState(({
-          isTaskEditing
-        }) => ({
-          newTaskMessage: this.savedMessage,
-          isTaskEditing: !isTaskEditing
-        }));
+        this._cancelUpdatingTaskMessage();
       }
+    };
+
+    this._updateTaskMessageOnClick = () => {};
+
+    this._cancelUpdatingTaskMessage = () => {
+      this.setState(({
+        isTaskEditing
+      }) => ({
+        newTaskMessage: this.savedMessage,
+        isTaskEditing: !isTaskEditing
+      }));
     };
 
     this._setTaskInputFocus = () => {
       this.taskInput.focus();
     };
 
-    this._updateTaskAsync = () => {
+    this._updateTask = () => {
       const taskState = this._getTaskShape(this.state);
 
       const {
@@ -5527,7 +5533,7 @@ class Task_Task extends react["PureComponent"] {
       _updateTaskAsync([taskState]);
     };
 
-    this._removeTaskAsync = () => {
+    this._removeTask = () => {
       const {
         id,
         _removeTaskAsync
@@ -5572,8 +5578,8 @@ class Task_Task extends react["PureComponent"] {
       },
       type: "text",
       value: newTaskMessage,
-      onChange: this._handleTaskMessageChange,
-      onKeyDown: this._updateTaskAsyncMessageOnKeyDown
+      onChange: this._updateNewTaskMessage,
+      onKeyDown: this._updateTaskMessageOnKeyDown
     }))), react_default.a.createElement("div", {
       className: styles_m_default.a.actions
     }, react_default.a.createElement(assets_Star, {
@@ -5594,7 +5600,7 @@ class Task_Task extends react["PureComponent"] {
       className: styles_m_default.a.removeTask,
       color1: "#3B8EF3",
       color2: "#000",
-      onClick: this._removeTaskAsync
+      onClick: this._removeTask
     })));
   }
 
@@ -5630,8 +5636,11 @@ const TOKEN = 'jS3ZXzemdXi9nUWm';
 
 // CONCATENATED MODULE: ./source/REST/api.js
 
+
+
 const api = {
-  createTask: async newTask => {
+  createTask: async newTaskMessage => {
+    const newTask = new helpers_BaseTaskModel(Object(uuid["v4"])(), false, false, newTaskMessage);
     const response = await fetch(MAIN_URL, {
       method: 'POST',
       headers: {
@@ -5681,19 +5690,16 @@ const api = {
     });
   },
   completeAllTasks: async oldTasks => {
-    const response = await fetch(MAIN_URL, {
+    const requests = oldTasks.map(task => fetch(MAIN_URL, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
         Authorization: TOKEN
       },
-      body: JSON.stringify(oldTasks)
-    }); // TODO: theoretically must be done via Promise.all
-
-    const {
-      data: tasks
-    } = await response.json();
-    return tasks;
+      body: JSON.stringify([task])
+    }));
+    const tasks = await Promise.all(requests).then(responses => Promise.all(responses.map(r => r.json()))).then(result => result.map(r => r.data));
+    return tasks.reduce((a1, a2) => [...a1, ...a2]);
   }
 };
 // CONCATENATED MODULE: ./source/REST/index.js
@@ -5714,14 +5720,13 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
  // ! Импорт модуля API должен иметь именно такой вид (import { api } from '../../REST')
 
 
-
 class Scheduler_Scheduler extends react["Component"] {
   constructor(...args) {
     super(...args);
     this.state = {
       isTasksFetching: false,
       tasksFilter: '',
-      taskMessage: '',
+      newTaskMessage: '',
       tasks: []
     };
 
@@ -5731,28 +5736,33 @@ class Scheduler_Scheduler extends react["Component"] {
       });
     };
 
-    this._createTask = async () => {
+    this._createTaskAsync = async event => {
       const {
-        taskMessage
+        newTaskMessage
       } = this.state; // TODO: a more complex check
 
-      if (taskMessage !== '') {
+      if (newTaskMessage !== '') {
+        if (event) {
+          event.preventDefault();
+        }
+
         this._setTasksFetchingState(true);
 
-        const newTask = new helpers_BaseTaskModel(Object(uuid["v4"])(), false, false, taskMessage);
-        const task = await api.createTask(newTask);
+        const task = await api.createTask(newTaskMessage);
         this.setState(({
           tasks
         }) => ({
-          taskMessage: '',
+          newTaskMessage: '',
           tasks: sortTasksByGroup([task, ...tasks])
         }));
 
         this._setTasksFetchingState(false);
+      } else {
+        return null;
       }
     };
 
-    this._fetchTasks = async () => {
+    this._fetchTasksAsync = async () => {
       this._setTasksFetchingState(true);
 
       const tasks = await api.fetchTasks();
@@ -5772,7 +5782,7 @@ class Scheduler_Scheduler extends react["Component"] {
       }) => {
         const updatedTaskList = tasks.map(currTask => updatedTask.find(ut => ut.id === currTask.id) || currTask);
         return {
-          taskMessage: '',
+          newTaskMessage: '',
           tasks: sortTasksByGroup(updatedTaskList)
         };
       });
@@ -5793,54 +5803,66 @@ class Scheduler_Scheduler extends react["Component"] {
       this._setTasksFetchingState(false);
     };
 
-    this._completeAllTasks = async () => {
-      this._setTasksFetchingState(true);
+    this._completeAllTasksAsync = async () => {
+      if (!this._getAllCompleted()) {
+        const {
+          tasks
+        } = this.state;
+        const uncompletedTasks = tasks.filter(task => task.completed === false); // Beyond stupid...
 
+        if (uncompletedTasks.length) {
+          this._setTasksFetchingState(true);
+
+          uncompletedTasks.forEach(task => task.completed = true);
+          const updatedTasks = await api.completeAllTasks(uncompletedTasks);
+          const updatedTaskList = tasks.map(currTask => updatedTasks.find(ut => ut.id === currTask.id) || currTask);
+          this.setState({
+            tasks: sortTasksByGroup(updatedTaskList)
+          });
+
+          this._setTasksFetchingState(false);
+        } else {
+          return null;
+        }
+      } else {
+        return null;
+      }
+    };
+
+    this._getAllCompleted = () => {
       const {
         tasks
       } = this.state;
-      const uncompletedTasks = tasks.filter(task => task.completed === false);
-      uncompletedTasks.forEach(task => task.completed = true);
-      const updatedTasks = await api.completeAllTasks(uncompletedTasks);
-      const updatedTaskList = tasks.map(currTask => updatedTasks.find(ut => ut.id === currTask.id) || currTask);
-      this.setState({
-        tasks: sortTasksByGroup(updatedTaskList)
-      });
-
-      this._setTasksFetchingState(false);
+      const completed = !tasks.some(task => task.completed === false);
+      return completed;
     };
 
-    this._handleInputChange = event => {
+    this._updateNewTaskMessage = event => {
       this.setState({
-        taskMessage: event.target.value
+        newTaskMessage: event.target.value
       });
     };
 
     this._updateTasksFilter = event => {
-      const tasksFilter = event.target.value;
+      const tasksFilter = event.target.value.toLowerCase();
       this.setState({
         tasksFilter
       });
     };
-
-    this._handleFormSubmit = event => {
-      event.preventDefault();
-    };
   }
 
   componentDidMount() {
-    this._fetchTasks();
+    this._fetchTasksAsync();
   }
 
   render() {
     const {
       tasks,
-      taskMessage,
+      newTaskMessage,
       isTasksFetching,
       tasksFilter
-    } = this.state; // console.log('tasks from render', tasks);
-
-    const filteredTasks = tasks.filter(task => task.message.toLowerCase().includes(tasksFilter.toLowerCase()));
+    } = this.state;
+    const filteredTasks = tasks.filter(task => task.message.toLowerCase().includes(tasksFilter));
     const tasksJSX = filteredTasks.map(task => {
       return react_default.a.createElement(Task_Task, _extends({
         key: task.id
@@ -5859,22 +5881,22 @@ class Scheduler_Scheduler extends react["Component"] {
       value: tasksFilter,
       onChange: this._updateTasksFilter
     })), react_default.a.createElement("section", null, react_default.a.createElement("form", {
-      onSubmit: this._handleFormSubmit
+      onSubmit: this._createTaskAsync
     }, react_default.a.createElement("input", {
       maxLength: "50",
       placeholder: "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u043D\u043E\u0432\u043E\u0439 \u0437\u0430\u0434\u0430\u0447\u0438",
       type: "text",
-      value: taskMessage,
-      onChange: this._handleInputChange
+      value: newTaskMessage,
+      onChange: this._updateNewTaskMessage
     }), react_default.a.createElement("button", {
-      onClick: this._createTask
+      onClick: this._createTaskAsync
     }, "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0437\u0430\u0434\u0430\u0447\u0443")), react_default.a.createElement("div", null, react_default.a.createElement("ul", null, tasksJSX))), react_default.a.createElement("footer", null, react_default.a.createElement(assets_Checkbox, {
       inlineBlock: true,
       checked: !tasks.some(task => task.completed === false),
       className: Scheduler_styles_m_default.a.toggleTaskFavoriteState,
       color1: "#000",
       color2: "#fff",
-      onClick: this._completeAllTasks
+      onClick: this._completeAllTasksAsync
     }), react_default.a.createElement("span", {
       className: Scheduler_styles_m_default.a.completeAllTasks
     }, "\u0412\u0441\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u044B")))));
@@ -6597,4 +6619,4 @@ function _interopDefault(e){return e&&"object"==typeof e&&"default"in e?e.defaul
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=source.d304f.js.map
+//# sourceMappingURL=source.f1b62.js.map
