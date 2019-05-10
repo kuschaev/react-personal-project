@@ -50,7 +50,7 @@ export default class Task extends PureComponent {
         );
     };
 
-    _handleTaskMessageChange = (event) => {
+    _updateNewTaskMessage = (event) => {
         this.setState({
             newTaskMessage: event.target.value,
         });
@@ -97,12 +97,18 @@ export default class Task extends PureComponent {
         }
 
         if (escapeKeyPressed) {
-            this.setState(({ isTaskEditing }) => ({
-                newTaskMessage: this.savedMessage,
-                isTaskEditing:  !isTaskEditing,
-            }));
+            this._cancelUpdatingTaskMessage();
         }
     };
+
+    _updateTaskMessageOnClick = () => {}
+
+    _cancelUpdatingTaskMessage = () => {
+        this.setState(({ isTaskEditing }) => ({
+            newTaskMessage: this.savedMessage,
+            isTaskEditing:  !isTaskEditing,
+        }));
+    }
 
     _setTaskInputFocus = () => {
         this.taskInput.focus();
@@ -151,7 +157,7 @@ export default class Task extends PureComponent {
                             } }
                             type = 'text'
                             value = { newTaskMessage }
-                            onChange = { this._handleTaskMessageChange }
+                            onChange = { this._updateNewTaskMessage }
                             onKeyDown = { this._updateTaskMessageOnKeyDown }
                         />
                     </div>

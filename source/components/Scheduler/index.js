@@ -9,14 +9,13 @@ import Checkbox from '../../theme/assets/Checkbox';
 // Instruments
 import Styles from './styles.m.css';
 import { api } from '../../REST'; // ! Импорт модуля API должен иметь именно такой вид (import { api } from '../../REST')
-import { BaseTaskModel, sortTasksByGroup } from '../../instruments';
-import { v4 } from 'uuid';
+import { sortTasksByGroup } from '../../instruments';
 
 export default class Scheduler extends Component {
     state = {
         isTasksFetching: false,
         tasksFilter:     '',
-        taskMessage:     '',
+        newTaskMessage:  '',
         tasks:           [],
     };
 
@@ -30,22 +29,26 @@ export default class Scheduler extends Component {
         });
     };
 
-    _createTaskAsync = async () => {
-        const { taskMessage } = this.state;
+    _createTaskAsync = async (event) => {
+        const { newTaskMessage } = this.state;
 
         // TODO: a more complex check
-        if (taskMessage !== '') {
+        if (newTaskMessage !== '') {
+            if (event) {
+                event.preventDefault();
+            }
             this._setTasksFetchingState(true);
 
-            const newTask = new BaseTaskModel(v4(), false, false, taskMessage);
-            const task = await api.createTask(newTask);
+            const task = await api.createTask(newTaskMessage);
 
             this.setState(({ tasks }) => ({
-                taskMessage: '',
-                tasks:       sortTasksByGroup([task, ...tasks]),
+                newTaskMessage: '',
+                tasks:          sortTasksByGroup([task, ...tasks]),
             }));
 
             this._setTasksFetchingState(false);
+        } else {
+            return null;
         }
     };
 
@@ -73,8 +76,8 @@ export default class Scheduler extends Component {
             );
 
             return {
-                taskMessage: '',
-                tasks:       sortTasksByGroup(updatedTaskList),
+                newTaskMessage: '',
+                tasks:          sortTasksByGroup(updatedTaskList),
             };
         });
 
@@ -94,60 +97,72 @@ export default class Scheduler extends Component {
     };
 
     _completeAllTasksAsync = async () => {
-        this._setTasksFetchingState(true);
-        const { tasks } = this.state;
+        if (!this._getAllCompleted()) {
+            const { tasks } = this.state;
 
-        const uncompletedTasks = tasks.filter(
-            (task) => task.completed === false
-        );
+            const uncompletedTasks = tasks.filter(
+                (task) => task.completed === false
+            );
 
-        uncompletedTasks.forEach((task) => task.completed = true);
+            // Beyond stupid...
+            if (uncompletedTasks.length) {
+                this._setTasksFetchingState(true);
 
-        const updatedTasks = await api.completeAllTasks(uncompletedTasks);
-        const updatedTaskList = tasks.map(
-            (currTask) =>
-                updatedTasks.find((ut) => ut.id === currTask.id) || currTask
-        );
+                uncompletedTasks.forEach((task) => task.completed = true);
 
-        this.setState({
-            tasks: sortTasksByGroup(updatedTaskList),
-        });
+                const updatedTasks = await api.completeAllTasks(
+                    uncompletedTasks
+                );
+                const updatedTaskList = tasks.map(
+                    (currTask) =>
+                        updatedTasks.find((ut) => ut.id === currTask.id) ||
+                        currTask
+                );
 
-        this._setTasksFetchingState(false);
+                this.setState({
+                    tasks: sortTasksByGroup(updatedTaskList),
+                });
+
+                this._setTasksFetchingState(false);
+            } else {
+                return null;
+            }
+        } else {
+            return null;
+        }
     };
 
     _getAllCompleted = () => {
         const { tasks } = this.state;
-        const completed = tasks.filter((task) => task.completed === true);
+        const completed = !tasks.some((task) => task.completed === false);
 
         return completed;
     };
 
     _updateNewTaskMessage = (event) => {
         this.setState({
-            taskMessage: event.target.value,
+            newTaskMessage: event.target.value,
         });
     };
 
     _updateTasksFilter = (event) => {
-        const tasksFilter = event.target.value;
+        const tasksFilter = event.target.value.toLowerCase();
 
         this.setState({
             tasksFilter,
         });
     };
 
-    _handleFormSubmit = (event) => {
-        event.preventDefault();
-    };
-
     render () {
-        const { tasks, taskMessage, isTasksFetching, tasksFilter } = this.state;
-
-        // console.log('tasks from render', tasks);
+        const {
+            tasks,
+            newTaskMessage,
+            isTasksFetching,
+            tasksFilter,
+        } = this.state;
 
         const filteredTasks = tasks.filter((task) =>
-            task.message.toLowerCase().includes(tasksFilter.toLowerCase())
+            task.message.toLowerCase().includes(tasksFilter)
         );
 
         const tasksJSX = filteredTasks.map((task) => {
@@ -176,12 +191,12 @@ export default class Scheduler extends Component {
                             />
                         </header>
                         <section>
-                            <form onSubmit = { this._handleFormSubmit }>
+                            <form onSubmit = { this._createTaskAsync }>
                                 <input
                                     maxLength = '50'
                                     placeholder = 'Описание новой задачи'
                                     type = 'text'
-                                    value = { taskMessage }
+                                    value = { newTaskMessage }
                                     onChange = { this._updateNewTaskMessage }
                                 />
                                 <button onClick = { this._createTaskAsync }>

@@ -1,7 +1,15 @@
 import { MAIN_URL, TOKEN } from './config';
+import { BaseTaskModel } from '../instruments/helpers';
+import { v4 } from 'uuid';
 
 export const api = {
-    createTask: async (newTask) => {
+    createTask: async (newTaskMessage) => {
+        const newTask = new BaseTaskModel(
+            v4(),
+            false,
+            false,
+            newTaskMessage
+        );
         const response = await fetch(MAIN_URL, {
             method:  'POST',
             headers: {
