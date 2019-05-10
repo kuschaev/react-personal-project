@@ -64,16 +64,6 @@ export const api = {
             .then((responses) => Promise.all(responses.map((r) => r.json())))
             .then((result) => result.map((r) => r.data));
 
-        // const response = await fetch(MAIN_URL, {
-        //     method:  'PUT',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //         Authorization:  TOKEN,
-        //     },
-        //     body: JSON.stringify(oldTasks),
-        // });
-        // const { data: tasks } = await response.json();
-
         return tasks.reduce((a1, a2) => [...a1, ...a2]);
     },
 };

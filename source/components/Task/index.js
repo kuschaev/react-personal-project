@@ -37,7 +37,7 @@ export default class Task extends PureComponent {
             (state, { completed }) => ({
                 completed: !completed,
             }),
-            this._updateTaskAsync
+            this._updateTask
         );
     };
 
@@ -46,7 +46,7 @@ export default class Task extends PureComponent {
             (state, { favorite }) => ({
                 favorite: !favorite,
             }),
-            this._updateTaskAsync
+            this._updateTask
         );
     };
 
@@ -82,7 +82,7 @@ export default class Task extends PureComponent {
         }
     };
 
-    _updateTaskAsyncMessageOnKeyDown = (event) => {
+    _updateTaskMessageOnKeyDown = (event) => {
         const enterKeyPressed = event.key === 'Enter' || event.keyCode === 13;
         const escapeKeyPressed = event.key === 'Escape' || event.keyCode === 27;
 
@@ -92,7 +92,7 @@ export default class Task extends PureComponent {
                     message:       newTaskMessage,
                     isTaskEditing: !isTaskEditing,
                 }),
-                this._updateTaskAsync
+                this._updateTask
             );
         }
 
@@ -108,14 +108,14 @@ export default class Task extends PureComponent {
         this.taskInput.focus();
     };
 
-    _updateTaskAsync = () => {
+    _updateTask = () => {
         const taskState = this._getTaskShape(this.state);
         const { _updateTaskAsync } = this.props;
 
         _updateTaskAsync([taskState]);
     };
 
-    _removeTaskAsync = () => {
+    _removeTask = () => {
         const { id, _removeTaskAsync } = this.props;
 
         _removeTaskAsync(id);
@@ -152,7 +152,7 @@ export default class Task extends PureComponent {
                             type = 'text'
                             value = { newTaskMessage }
                             onChange = { this._handleTaskMessageChange }
-                            onKeyDown = { this._updateTaskAsyncMessageOnKeyDown }
+                            onKeyDown = { this._updateTaskMessageOnKeyDown }
                         />
                     </div>
                 </div>
@@ -177,7 +177,7 @@ export default class Task extends PureComponent {
                         className = { Styles.removeTask }
                         color1 = '#3B8EF3'
                         color2 = '#000'
-                        onClick = { this._removeTaskAsync }
+                        onClick = { this._removeTask }
                     />
                 </div>
             </li>

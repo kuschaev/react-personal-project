@@ -21,7 +21,7 @@ export default class Scheduler extends Component {
     };
 
     componentDidMount () {
-        this._fetchTasks();
+        this._fetchTasksAsync();
     }
 
     _setTasksFetchingState = (state) => {
@@ -30,7 +30,7 @@ export default class Scheduler extends Component {
         });
     };
 
-    _createTask = async () => {
+    _createTaskAsync = async () => {
         const { taskMessage } = this.state;
 
         // TODO: a more complex check
@@ -49,7 +49,7 @@ export default class Scheduler extends Component {
         }
     };
 
-    _fetchTasks = async () => {
+    _fetchTasksAsync = async () => {
         this._setTasksFetchingState(true);
 
         const tasks = await api.fetchTasks();
@@ -93,7 +93,7 @@ export default class Scheduler extends Component {
         this._setTasksFetchingState(false);
     };
 
-    _completeAllTasks = async () => {
+    _completeAllTasksAsync = async () => {
         this._setTasksFetchingState(true);
         const { tasks } = this.state;
 
@@ -116,7 +116,14 @@ export default class Scheduler extends Component {
         this._setTasksFetchingState(false);
     };
 
-    _handleInputChange = (event) => {
+    _getAllCompleted = () => {
+        const { tasks } = this.state;
+        const completed = tasks.filter((task) => task.completed === true);
+
+        return completed;
+    };
+
+    _updateNewTaskMessage = (event) => {
         this.setState({
             taskMessage: event.target.value,
         });
@@ -175,9 +182,9 @@ export default class Scheduler extends Component {
                                     placeholder = 'Описание новой задачи'
                                     type = 'text'
                                     value = { taskMessage }
-                                    onChange = { this._handleInputChange }
+                                    onChange = { this._updateNewTaskMessage }
                                 />
-                                <button onClick = { this._createTask }>
+                                <button onClick = { this._createTaskAsync }>
                                     Добавить задачу
                                 </button>
                             </form>
@@ -200,7 +207,7 @@ export default class Scheduler extends Component {
                                 className = { Styles.toggleTaskFavoriteState }
                                 color1 = '#000'
                                 color2 = '#fff'
-                                onClick = { this._completeAllTasks }
+                                onClick = { this._completeAllTasksAsync }
                             />
                             <span className = { Styles.completeAllTasks }>
                                 Все задачи выполнены
