@@ -5413,10 +5413,6 @@ var styles_m = __webpack_require__(1);
 var styles_m_default = /*#__PURE__*/__webpack_require__.n(styles_m);
 
 // CONCATENATED MODULE: ./source/components/Task/index.js
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 // Core
  // Components
 
@@ -5443,74 +5439,76 @@ class Task_Task extends react["PureComponent"] {
     });
 
     this._toggleTaskCompletedState = () => {
-      this.setState(({
+      this.setState((state, {
         completed
       }) => ({
         completed: !completed
-      }), this._updateTask);
+      }), this._updateTaskAsync);
     };
 
     this._toggleTaskFavoriteState = () => {
-      this.setState(({
+      this.setState((state, {
         favorite
       }) => ({
         favorite: !favorite
-      }), this._updateTask);
+      }), this._updateTaskAsync);
     };
 
     this._handleTaskMessageChange = event => {
       this.setState({
-        message: event.target.value
+        newTaskMessage: event.target.value
       });
     };
 
     this._setTaskEditingState = () => {
       // A fallback option in case of esc press
       // or second task edit toggle
-      if (this.state.inputIsDisabled) {
-        this.savedMessage = this.state.message;
+      if (!this.state.isTaskEditing) {
+        this.savedMessage = this.props.message;
       }
 
       this.setState(({
-        inputIsDisabled
+        isTaskEditing
       }) => {
-        if (!inputIsDisabled) {
+        if (isTaskEditing) {
           return {
-            inputIsDisabled: !inputIsDisabled,
-            message: this.savedMessage
+            isTaskEditing: !isTaskEditing,
+            newTaskMessage: this.savedMessage
           };
         }
 
         return {
-          inputIsDisabled: !inputIsDisabled
+          isTaskEditing: !isTaskEditing
         };
       }, this._setTaskInputFocus);
     };
 
     this._handleInputDoubleClick = () => {
-      if (this.state.inputIsDisabled) {
+      if (!this.state.isTaskEditing) {
         this._setTaskEditingState();
       }
     };
 
-    this._updateTaskMessageOnKeyDown = event => {
+    this._updateTaskAsyncMessageOnKeyDown = event => {
       const enterKeyPressed = event.key === 'Enter' || event.keyCode === 13;
       const escapeKeyPressed = event.key === 'Escape' || event.keyCode === 27;
 
       if (enterKeyPressed) {
         this.setState(({
-          inputIsDisabled
+          isTaskEditing,
+          newTaskMessage
         }) => ({
-          inputIsDisabled: !inputIsDisabled
-        }), this._updateTask);
+          message: newTaskMessage,
+          isTaskEditing: !isTaskEditing
+        }), this._updateTaskAsync);
       }
 
       if (escapeKeyPressed) {
         this.setState(({
-          inputIsDisabled
+          isTaskEditing
         }) => ({
-          message: this.savedMessage,
-          inputIsDisabled: !inputIsDisabled
+          newTaskMessage: this.savedMessage,
+          isTaskEditing: !isTaskEditing
         }));
       }
     };
@@ -5519,61 +5517,40 @@ class Task_Task extends react["PureComponent"] {
       this.taskInput.focus();
     };
 
-    this._updateTask = () => {
+    this._updateTaskAsync = () => {
       const taskState = this._getTaskShape(this.state);
 
       const {
-        _updateTask
+        _updateTaskAsync
       } = this.props;
 
-      _updateTask([taskState]);
+      _updateTaskAsync([taskState]);
     };
 
-    this._removeTask = () => {
+    this._removeTaskAsync = () => {
       const {
         id,
-        _removeTask
+        _removeTaskAsync
       } = this.props;
 
-      _removeTask(id);
+      _removeTaskAsync(id);
     };
 
-    this._updateNewTaskMessage = () => {};
-
-    this._updateTaskMessageOnClick = () => {};
-
-    this._cancelUpdatingTaskMessage = () => {};
-
-    const taskProps = this._getTaskShape(props);
-
-    this.state = _objectSpread({}, taskProps, {
-      inputIsDisabled: true
-    });
-  } // A known anti-pattern
-  // componentDidUpdate (props) {
-  //     console.log('cdu with', props);
-  //     this.setState({ ...props });
-  // }
-  // static getDerivedStateFromProps (newProps, oldState) {
-  //     console.log('newProps', newProps);
-  //     console.log('oldState', oldState);
-  //     if (newProps.completed !== oldState.completed) {
-  //         return {
-  //             completed: newProps.completed,
-  //         };
-  //     }
-  //     return null;
-  // }
-
+    this.state = {
+      isTaskEditing: false,
+      newTaskMessage: props.message
+    };
+  }
 
   render() {
     const {
       completed,
-      favorite,
-      message,
-      inputIsDisabled
-    } = this.state; // console.log('task state from render', this.state);
-
+      favorite
+    } = this.props;
+    const {
+      isTaskEditing,
+      newTaskMessage
+    } = this.state;
     return react_default.a.createElement("li", {
       className: completed ? `${styles_m_default.a.task} ${styles_m_default.a.completed}` : styles_m_default.a.task
     }, react_default.a.createElement("div", {
@@ -5588,15 +5565,15 @@ class Task_Task extends react["PureComponent"] {
     }), react_default.a.createElement("div", {
       onDoubleClick: this._handleInputDoubleClick
     }, react_default.a.createElement("input", {
-      disabled: inputIsDisabled,
+      disabled: !isTaskEditing,
       maxLength: "50",
       ref: input => {
         this.taskInput = input;
       },
       type: "text",
-      value: message,
+      value: newTaskMessage,
       onChange: this._handleTaskMessageChange,
-      onKeyDown: this._updateTaskMessageOnKeyDown
+      onKeyDown: this._updateTaskAsyncMessageOnKeyDown
     }))), react_default.a.createElement("div", {
       className: styles_m_default.a.actions
     }, react_default.a.createElement(assets_Star, {
@@ -5617,7 +5594,7 @@ class Task_Task extends react["PureComponent"] {
       className: styles_m_default.a.removeTask,
       color1: "#3B8EF3",
       color2: "#000",
-      onClick: this._removeTask
+      onClick: this._removeTaskAsync
     })));
   }
 
@@ -5742,15 +5719,15 @@ class Scheduler_Scheduler extends react["Component"] {
   constructor(...args) {
     super(...args);
     this.state = {
-      operationInProgress: false,
-      findString: '',
+      isTasksFetching: false,
+      tasksFilter: '',
       taskMessage: '',
       tasks: []
     };
 
-    this._setOperationInProgress = state => {
+    this._setTasksFetchingState = state => {
       this.setState({
-        operationInProgress: state
+        isTasksFetching: state
       });
     };
 
@@ -5760,7 +5737,7 @@ class Scheduler_Scheduler extends react["Component"] {
       } = this.state; // TODO: a more complex check
 
       if (taskMessage !== '') {
-        this._setOperationInProgress(true);
+        this._setTasksFetchingState(true);
 
         const newTask = new helpers_BaseTaskModel(Object(uuid["v4"])(), false, false, taskMessage);
         const task = await api.createTask(newTask);
@@ -5771,23 +5748,23 @@ class Scheduler_Scheduler extends react["Component"] {
           tasks: sortTasksByGroup([task, ...tasks])
         }));
 
-        this._setOperationInProgress(false);
+        this._setTasksFetchingState(false);
       }
     };
 
     this._fetchTasks = async () => {
-      this._setOperationInProgress(true);
+      this._setTasksFetchingState(true);
 
       const tasks = await api.fetchTasks();
       this.setState({
         tasks: sortTasksByGroup(tasks)
       });
 
-      this._setOperationInProgress(false);
+      this._setTasksFetchingState(false);
     };
 
-    this._updateTask = async task => {
-      this._setOperationInProgress(true);
+    this._updateTaskAsync = async task => {
+      this._setTasksFetchingState(true);
 
       const updatedTask = await api.updateTask(task);
       this.setState(({
@@ -5800,11 +5777,11 @@ class Scheduler_Scheduler extends react["Component"] {
         };
       });
 
-      this._setOperationInProgress(false);
+      this._setTasksFetchingState(false);
     };
 
-    this._removeTask = async id => {
-      this._setOperationInProgress(true);
+    this._removeTaskAsync = async id => {
+      this._setTasksFetchingState(true);
 
       await api.removeTask(id);
       this.setState(({
@@ -5813,27 +5790,24 @@ class Scheduler_Scheduler extends react["Component"] {
         tasks: tasks.filter(task => task.id !== id)
       }));
 
-      this._setOperationInProgress(false);
+      this._setTasksFetchingState(false);
     };
 
     this._completeAllTasks = async () => {
-      this._setOperationInProgress(true);
+      this._setTasksFetchingState(true);
 
       const {
         tasks
       } = this.state;
-      tasks.forEach(task => task.completed = true); // A very dirty hack
-      // TODO: this must be done the React way, via lifecycle methods
-
+      const uncompletedTasks = tasks.filter(task => task.completed === false);
+      uncompletedTasks.forEach(task => task.completed = true);
+      const updatedTasks = await api.completeAllTasks(uncompletedTasks);
+      const updatedTaskList = tasks.map(currTask => updatedTasks.find(ut => ut.id === currTask.id) || currTask);
       this.setState({
-        tasks: []
-      });
-      const updatedTasks = await api.completeAllTasks(tasks);
-      this.setState({
-        tasks: sortTasksByGroup(updatedTasks)
+        tasks: sortTasksByGroup(updatedTaskList)
       });
 
-      this._setOperationInProgress(false);
+      this._setTasksFetchingState(false);
     };
 
     this._handleInputChange = event => {
@@ -5843,9 +5817,9 @@ class Scheduler_Scheduler extends react["Component"] {
     };
 
     this._updateTasksFilter = event => {
-      const findString = event.target.value;
+      const tasksFilter = event.target.value;
       this.setState({
-        findString
+        tasksFilter
       });
     };
 
@@ -5862,27 +5836,27 @@ class Scheduler_Scheduler extends react["Component"] {
     const {
       tasks,
       taskMessage,
-      operationInProgress,
-      findString
+      isTasksFetching,
+      tasksFilter
     } = this.state; // console.log('tasks from render', tasks);
 
-    const filteredTasks = tasks.filter(task => task.message.toLowerCase().includes(findString.toLowerCase()));
+    const filteredTasks = tasks.filter(task => task.message.toLowerCase().includes(tasksFilter.toLowerCase()));
     const tasksJSX = filteredTasks.map(task => {
       return react_default.a.createElement(Task_Task, _extends({
         key: task.id
       }, task, {
-        _removeTask: this._removeTask,
-        _updateTask: this._updateTask
+        _removeTaskAsync: this._removeTaskAsync,
+        _updateTaskAsync: this._updateTaskAsync
       }));
     });
     return react_default.a.createElement(react_default.a.Fragment, null, react_default.a.createElement(Spinner_Spinner, {
-      isSpinning: operationInProgress
+      isSpinning: isTasksFetching
     }), react_default.a.createElement("section", {
       className: Scheduler_styles_m_default.a.scheduler
     }, react_default.a.createElement("main", null, react_default.a.createElement("header", null, react_default.a.createElement("h1", null, "\u041F\u043B\u0430\u043D\u0438\u0440\u043E\u0432\u0449\u0438\u043A \u0437\u0430\u0434\u0430\u0447"), react_default.a.createElement("input", {
       placeholder: "\u041F\u043E\u0438\u0441\u043A",
       type: "search",
-      value: findString,
+      value: tasksFilter,
       onChange: this._updateTasksFilter
     })), react_default.a.createElement("section", null, react_default.a.createElement("form", {
       onSubmit: this._handleFormSubmit
@@ -6623,4 +6597,4 @@ function _interopDefault(e){return e&&"object"==typeof e&&"default"in e?e.defaul
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=source.183d9.js.map
+//# sourceMappingURL=source.d304f.js.map
