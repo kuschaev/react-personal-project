@@ -14,13 +14,14 @@
         "lint": "run-s lint:javascript lint:css",
         "lint:javascript": "jest --projects \"./jest/jest.eslint.config.json\"",
         "lint:css": "jest --projects \"./jest/jest.stylelint.config.json\"",
-        "test": "jest --config=\"./jest/jest.test.config.json\"",
+        "test": "jest --no-cache --config=\"./jest/jest.test.config.json\"",
         "test:watch": "npm test -- --watch",
         "test:debug": "node --inspect-brk \"./node_modules/.bin/jest\" --runInBand --config=\"./jest/jest.test.config.json\"",
         "soundcheck": "jest --config=\"./jest/jest.config.json\"",
         "prettier": "prettier-eslint --list-different \"./source/**/*.js\"; prettier-eslint --write \"./source/**/*.js\"",
         "deploy": "run-s build:prod-github-pages gh-pages",
-        "gh-pages": "gh-pages -d build"
+        "gh-pages": "gh-pages -d build",
+        "clear_jest": "jest --clearCache"
     },
     "dependencies": {
         "classnames": "2.2.6",
