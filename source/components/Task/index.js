@@ -11,15 +11,12 @@ import Remove from '../../theme/assets/Remove';
 import Styles from './styles.m.css';
 
 export default class Task extends PureComponent {
-    constructor (props) {
-        super(props);
 
-        this.state = {
-            isTaskEditing: false,
-            newMessage:    props.message,
-        };
-        this.taskInput = React.createRef();
-    }
+    state = {
+        isTaskEditing: false,
+        newMessage:    this.props.message,
+    };
+    taskInput = React.createRef();
 
     _getTaskShape = ({
         id = this.props.id,

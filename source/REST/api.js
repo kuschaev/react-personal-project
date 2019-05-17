@@ -4,12 +4,7 @@ import { v4 } from 'uuid';
 
 export const api = {
     createTask: async (newTaskMessage) => {
-        const newTask = new BaseTaskModel(
-            v4(),
-            false,
-            false,
-            newTaskMessage
-        );
+        const newTask = new BaseTaskModel(v4(), false, false, newTaskMessage);
         const response = await fetch(MAIN_URL, {
             method:  'POST',
             headers: {
@@ -70,8 +65,10 @@ export const api = {
 
         const tasks = await Promise.all(requests)
             .then((responses) => Promise.all(responses.map((r) => r.json())))
-            .then((result) => result.map((r) => r.data));
+            .then((result) =>
+                result.map((r) => r.data).reduce((a1, a2) => [...a1, ...a2])
+            );
 
-        return tasks.reduce((a1, a2) => [...a1, ...a2]);
+        return tasks;
     },
 };

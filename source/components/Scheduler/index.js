@@ -33,13 +33,21 @@ export default class Scheduler extends Component {
         const { newTaskMessage } = this.state;
 
         // TODO: a more complex check
-        if (newTaskMessage !== '') {
+        if (newTaskMessage) {
             if (event) {
                 event.preventDefault();
             }
             this._setTasksFetchingState(true);
 
-            const task = await api.createTask(newTaskMessage);
+            let task;
+
+            try {
+                task = await api.createTask(newTaskMessage);
+            } catch (error) {
+                if (!task || !task.length) {
+                    throw error;
+                }
+            }
 
             this.setState(({ tasks }) => ({
                 newTaskMessage: '',
@@ -67,12 +75,21 @@ export default class Scheduler extends Component {
     _updateTaskAsync = async (task) => {
         this._setTasksFetchingState(true);
 
-        const updatedTask = await api.updateTask(task);
+        let updatedTask;
+
+        try {
+            updatedTask = await api.updateTask(task);
+        } catch (error) {
+            if (!updatedTask || !updatedTask.length) {
+                throw error;
+            }
+        }
 
         this.setState(({ tasks }) => {
             const updatedTaskList = tasks.map(
                 (currTask) =>
-                    updatedTask.find((ut) => ut.id === currTask.id) || currTask
+                    updatedTask.find((updTask) => updTask.id === currTask.id) ||
+                    currTask
             );
 
             return {
@@ -100,23 +117,31 @@ export default class Scheduler extends Component {
         if (!this._getAllCompleted()) {
             const { tasks } = this.state;
 
-            const uncompletedTasks = tasks.filter(
-                (task) => task.completed === false
-            );
+            const uncompletedTasks = tasks.filter((task) => !task.completed);
 
-            // Beyond stupid...
             if (uncompletedTasks.length) {
                 this._setTasksFetchingState(true);
 
                 uncompletedTasks.forEach((task) => task.completed = true);
 
-                const updatedTasks = await api.completeAllTasks(
-                    uncompletedTasks
-                );
+                let updatedTasks;
+
+                try {
+                    updatedTasks = await api.completeAllTasks(uncompletedTasks);
+                } catch (error) {
+                    if (
+                        !updatedTasks ||
+                        updatedTasks.length !== uncompletedTasks.length
+                    ) {
+                        throw error;
+                    }
+                }
+
                 const updatedTaskList = tasks.map(
                     (currTask) =>
-                        updatedTasks.find((ut) => ut.id === currTask.id) ||
-                        currTask
+                        updatedTasks.find(
+                            (updTask) => updTask.id === currTask.id
+                        ) || currTask
                 );
 
                 this.setState({
@@ -134,7 +159,7 @@ export default class Scheduler extends Component {
 
     _getAllCompleted = () => {
         const { tasks } = this.state;
-        const completed = !tasks.some((task) => task.completed === false);
+        const completed = !tasks.some((task) => !task.completed);
 
         return completed;
     };
@@ -204,19 +229,13 @@ export default class Scheduler extends Component {
                                 </button>
                             </form>
                             <div>
-                                <ul>
-                                    {tasksJSX}
-                                </ul>
+                                <ul>{tasksJSX}</ul>
                             </div>
                         </section>
                         <footer>
                             <Checkbox
                                 inlineBlock
-                                checked = {
-                                    !tasks.some(
-                                        (task) => task.completed === false
-                                    )
-                                }
+                                checked = { !tasks.some((task) => !task.completed) }
                                 className = { Styles.toggleTaskFavoriteState }
                                 color1 = '#000'
                                 color2 = '#fff'
