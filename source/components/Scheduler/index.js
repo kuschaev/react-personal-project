@@ -193,7 +193,7 @@ export default class Scheduler extends Component {
                         <section>
                             <form onSubmit = { this._createTaskAsync }>
                                 <input
-                                    maxLength = '50'
+                                    maxLength = { 50 }
                                     placeholder = 'Описание новой задачи'
                                     type = 'text'
                                     value = { newTaskMessage }
@@ -205,9 +205,7 @@ export default class Scheduler extends Component {
                             </form>
                             <div>
                                 <ul>
-                                    {/* <div style = { { position: 'relative' } }> */}
                                     {tasksJSX}
-                                    {/* </div> */}
                                 </ul>
                             </div>
                         </section>

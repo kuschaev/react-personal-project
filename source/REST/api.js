@@ -40,7 +40,7 @@ export const api = {
                 'Content-Type': 'application/json',
                 Authorization:  TOKEN,
             },
-            body: JSON.stringify(oldTask),
+            body: JSON.stringify([oldTask]),
         });
         const { data: tasks } = await response.json();
 
