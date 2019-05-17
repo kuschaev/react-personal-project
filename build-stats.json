@@ -2,22 +2,22 @@
   "errors": [
   ],
   "warnings": [
-    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  js/source.f1b62.js (306 KiB)",
-    "entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.\nEntrypoints:\n  source (314 KiB)\n      css/86f7d50000d4a82e44a4.8aef9.css\n      js/source.f1b62.js\n",
+    "asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).\nThis can impact web performance.\nAssets: \n  js/source.521e5.js (306 KiB)",
+    "entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.\nEntrypoints:\n  source (315 KiB)\n      css/86f7d50000d4a82e44a4.033c3.css\n      js/source.521e5.js\n",
     "webpack performance recommendations: \nYou can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.\nFor more info visit https://webpack.js.org/guides/code-splitting/"
   ],
   "version": "4.28.4",
-  "hash": "8aef970ce43c0eb01254",
-  "time": 31865,
-  "builtAt": 1557526999426,
+  "hash": "033c3ea18fff7d2b1b2a",
+  "time": 37027,
+  "builtAt": 1558105326086,
   "publicPath": "/react-personal-project/",
   "outputPath": "/Users/november_kilo/Lectrum/react-personal-project/build",
   "assetsByChunkName": {
     "source": [
-      "css/86f7d50000d4a82e44a4.8aef9.css",
-      "js/source.f1b62.js",
-      "css/86f7d50000d4a82e44a4.8aef9.css.map",
-      "js/source.f1b62.js.map"
+      "css/86f7d50000d4a82e44a4.033c3.css",
+      "js/source.521e5.js",
+      "css/86f7d50000d4a82e44a4.033c3.css.map",
+      "js/source.521e5.js.map"
     ]
   },
   "assets": [
@@ -31,7 +31,7 @@
       "emitted": true
     },
     {
-      "name": "css/86f7d50000d4a82e44a4.8aef9.css",
+      "name": "css/86f7d50000d4a82e44a4.033c3.css",
       "size": 8449,
       "chunks": [
         0
@@ -42,7 +42,7 @@
       "emitted": true
     },
     {
-      "name": "css/86f7d50000d4a82e44a4.8aef9.css.map",
+      "name": "css/86f7d50000d4a82e44a4.033c3.css.map",
       "size": 11262,
       "chunks": [
         0
@@ -422,8 +422,8 @@
       "emitted": true
     },
     {
-      "name": "js/source.f1b62.js",
-      "size": 313287,
+      "name": "js/source.521e5.js",
+      "size": 313827,
       "chunks": [
         0
       ],
@@ -434,8 +434,8 @@
       "isOverSizeLimit": true
     },
     {
-      "name": "js/source.f1b62.js.map",
-      "size": 394237,
+      "name": "js/source.521e5.js.map",
+      "size": 394814,
       "chunks": [
         0
       ],
@@ -452,10 +452,10 @@
         0
       ],
       "assets": [
-        "css/86f7d50000d4a82e44a4.8aef9.css",
-        "js/source.f1b62.js",
-        "css/86f7d50000d4a82e44a4.8aef9.css.map",
-        "js/source.f1b62.js.map"
+        "css/86f7d50000d4a82e44a4.033c3.css",
+        "js/source.521e5.js",
+        "css/86f7d50000d4a82e44a4.033c3.css.map",
+        "js/source.521e5.js.map"
       ],
       "children": {
       },
@@ -470,10 +470,10 @@
         0
       ],
       "assets": [
-        "css/86f7d50000d4a82e44a4.8aef9.css",
-        "js/source.f1b62.js",
-        "css/86f7d50000d4a82e44a4.8aef9.css.map",
-        "js/source.f1b62.js.map"
+        "css/86f7d50000d4a82e44a4.033c3.css",
+        "js/source.521e5.js",
+        "css/86f7d50000d4a82e44a4.033c3.css.map",
+        "js/source.521e5.js.map"
       ],
       "children": {
       },
@@ -488,17 +488,17 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 313887,
+      "size": 314417,
       "names": [
         "source"
       ],
       "files": [
-        "css/86f7d50000d4a82e44a4.8aef9.css",
-        "js/source.f1b62.js",
-        "css/86f7d50000d4a82e44a4.8aef9.css.map",
-        "js/source.f1b62.js.map"
+        "css/86f7d50000d4a82e44a4.033c3.css",
+        "js/source.521e5.js",
+        "css/86f7d50000d4a82e44a4.033c3.css.map",
+        "js/source.521e5.js.map"
       ],
-      "hash": "f1b629543b291202776e",
+      "hash": "521e52ad20e99b847ef0",
       "siblings": [
       ],
       "parents": [
@@ -608,7 +608,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony side effect evaluation",
               "userRequest": "react",
-              "loc": "2:0-45"
+              "loc": "2:0-41"
             },
             {
               "moduleId": 14,
@@ -617,7 +617,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony side effect evaluation",
               "userRequest": "react",
-              "loc": "2:0-41"
+              "loc": "2:0-45"
             },
             {
               "moduleId": 14,
@@ -788,6 +788,15 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
+              "loc": "17:21-26"
+            },
+            {
+              "moduleId": 14,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+              "module": "./source/components/Scheduler/index.js + 12 modules",
+              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
               "loc": "17:52-57"
             },
             {
@@ -851,7 +860,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "145:11-16"
+              "loc": "157:11-16"
             },
             {
               "moduleId": 14,
@@ -860,7 +869,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "147:7-12"
+              "loc": "159:7-12"
             },
             {
               "moduleId": 14,
@@ -869,7 +878,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "149:7-12"
+              "loc": "161:7-12"
             },
             {
               "moduleId": 14,
@@ -878,106 +887,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "156:8-13"
-            },
-            {
-              "moduleId": 14,
-              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-              "module": "./source/components/Scheduler/index.js + 12 modules",
-              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "158:7-12"
-            },
-            {
-              "moduleId": 14,
-              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-              "module": "./source/components/Scheduler/index.js + 12 modules",
-              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "158:13-18"
-            },
-            {
-              "moduleId": 14,
-              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-              "module": "./source/components/Scheduler/index.js + 12 modules",
-              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "165:11-16"
-            },
-            {
-              "moduleId": 14,
-              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-              "module": "./source/components/Scheduler/index.js + 12 modules",
-              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "165:31-36"
-            },
-            {
-              "moduleId": 14,
-              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-              "module": "./source/components/Scheduler/index.js + 12 modules",
-              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "165:53-58"
-            },
-            {
-              "moduleId": 14,
-              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-              "module": "./source/components/Scheduler/index.js + 12 modules",
-              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "167:8-13"
-            },
-            {
-              "moduleId": 14,
-              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-              "module": "./source/components/Scheduler/index.js + 12 modules",
-              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "168:10-15"
-            },
-            {
-              "moduleId": 14,
-              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-              "module": "./source/components/Scheduler/index.js + 12 modules",
-              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "169:7-12"
-            },
-            {
-              "moduleId": 14,
-              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-              "module": "./source/components/Scheduler/index.js + 12 modules",
-              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "169:41-46"
-            },
-            {
-              "moduleId": 14,
-              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-              "module": "./source/components/Scheduler/index.js + 12 modules",
-              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "169:77-82"
-            },
-            {
-              "moduleId": 14,
-              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-              "module": "./source/components/Scheduler/index.js + 12 modules",
-              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "169:211-216"
+              "loc": "168:8-13"
             },
             {
               "moduleId": 14,
@@ -995,7 +905,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "174:9-14"
+              "loc": "178:10-15"
             },
             {
               "moduleId": 14,
@@ -1004,7 +914,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "174:46-51"
+              "loc": "180:7-12"
             },
             {
               "moduleId": 14,
@@ -1013,7 +923,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "176:7-12"
+              "loc": "185:13-18"
             },
             {
               "moduleId": 14,
@@ -1022,7 +932,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "177:8-13"
+              "loc": "187:8-13"
             },
             {
               "moduleId": 14,
@@ -1031,7 +941,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "182:8-13"
+              "loc": "192:11-16"
             },
             {
               "moduleId": 14,
@@ -1040,7 +950,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "183:8-13"
+              "loc": "192:31-36"
             },
             {
               "moduleId": 14,
@@ -1049,7 +959,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "184:98-103"
+              "loc": "192:53-58"
             },
             {
               "moduleId": 14,
@@ -1058,7 +968,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "184:131-136"
+              "loc": "193:8-13"
             },
             {
               "moduleId": 14,
@@ -1067,7 +977,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "184:176-181"
+              "loc": "194:8-13"
             },
             {
               "moduleId": 14,
@@ -1076,7 +986,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "184:212-217"
+              "loc": "196:7-12"
             },
             {
               "moduleId": 14,
@@ -1085,7 +995,106 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "191:8-13"
+              "loc": "196:41-46"
+            },
+            {
+              "moduleId": 14,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+              "module": "./source/components/Scheduler/index.js + 12 modules",
+              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "196:77-82"
+            },
+            {
+              "moduleId": 14,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+              "module": "./source/components/Scheduler/index.js + 12 modules",
+              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "196:211-216"
+            },
+            {
+              "moduleId": 14,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+              "module": "./source/components/Scheduler/index.js + 12 modules",
+              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "201:9-14"
+            },
+            {
+              "moduleId": 14,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+              "module": "./source/components/Scheduler/index.js + 12 modules",
+              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "201:46-51"
+            },
+            {
+              "moduleId": 14,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+              "module": "./source/components/Scheduler/index.js + 12 modules",
+              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "203:7-12"
+            },
+            {
+              "moduleId": 14,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+              "module": "./source/components/Scheduler/index.js + 12 modules",
+              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "209:8-13"
+            },
+            {
+              "moduleId": 14,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+              "module": "./source/components/Scheduler/index.js + 12 modules",
+              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "211:98-103"
+            },
+            {
+              "moduleId": 14,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+              "module": "./source/components/Scheduler/index.js + 12 modules",
+              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "211:131-136"
+            },
+            {
+              "moduleId": 14,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+              "module": "./source/components/Scheduler/index.js + 12 modules",
+              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "211:176-181"
+            },
+            {
+              "moduleId": 14,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+              "module": "./source/components/Scheduler/index.js + 12 modules",
+              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "211:212-217"
+            },
+            {
+              "moduleId": 14,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+              "module": "./source/components/Scheduler/index.js + 12 modules",
+              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "218:8-13"
             },
             {
               "moduleId": 15,
@@ -1193,7 +1202,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "./styles.m.css",
-              "loc": "146:32-38"
+              "loc": "158:32-38"
             },
             {
               "moduleId": 14,
@@ -1202,7 +1211,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "./styles.m.css",
-              "loc": "146:47-53"
+              "loc": "158:47-53"
             },
             {
               "moduleId": 14,
@@ -1211,7 +1220,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "./styles.m.css",
-              "loc": "146:68-74"
+              "loc": "158:68-74"
             },
             {
               "moduleId": 14,
@@ -1220,7 +1229,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "./styles.m.css",
-              "loc": "148:17-23"
+              "loc": "160:17-23"
             },
             {
               "moduleId": 14,
@@ -1229,25 +1238,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "./styles.m.css",
-              "loc": "152:17-23"
-            },
-            {
-              "moduleId": 14,
-              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-              "module": "./source/components/Scheduler/index.js + 12 modules",
-              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-              "type": "harmony import specifier",
-              "userRequest": "./styles.m.css",
-              "loc": "169:17-23"
-            },
-            {
-              "moduleId": 14,
-              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-              "module": "./source/components/Scheduler/index.js + 12 modules",
-              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-              "type": "harmony import specifier",
-              "userRequest": "./styles.m.css",
-              "loc": "173:17-23"
+              "loc": "164:17-23"
             },
             {
               "moduleId": 14,
@@ -1265,7 +1256,25 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "./styles.m.css",
-              "loc": "185:17-23"
+              "loc": "183:17-23"
+            },
+            {
+              "moduleId": 14,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+              "module": "./source/components/Scheduler/index.js + 12 modules",
+              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+              "type": "harmony import specifier",
+              "userRequest": "./styles.m.css",
+              "loc": "189:17-23"
+            },
+            {
+              "moduleId": 14,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+              "module": "./source/components/Scheduler/index.js + 12 modules",
+              "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+              "type": "harmony import specifier",
+              "userRequest": "./styles.m.css",
+              "loc": "195:17-23"
             }
           ],
           "usedExports": [
@@ -1414,9 +1423,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/api.js",
+          "issuer": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/helpers.js",
           "issuerId": null,
-          "issuerName": "./source/REST/api.js",
+          "issuerName": "./source/instruments/helpers.js",
           "issuerPath": [
             {
               "id": 15,
@@ -1435,13 +1444,13 @@
             },
             {
               "id": null,
-              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/index.js",
-              "name": "./source/REST/index.js"
+              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/index.js",
+              "name": "./source/instruments/index.js"
             },
             {
               "id": null,
-              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/api.js",
-              "name": "./source/REST/api.js"
+              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/helpers.js",
+              "name": "./source/instruments/helpers.js"
             }
           ],
           "failed": false,
@@ -1553,7 +1562,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "./styles.m.css",
-              "loc": "168:17-23"
+              "loc": "195:17-23"
             },
             {
               "moduleId": 14,
@@ -1562,7 +1571,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "./styles.m.css",
-              "loc": "187:17-23"
+              "loc": "214:17-23"
             },
             {
               "moduleId": 14,
@@ -1571,7 +1580,7 @@
               "moduleName": "./source/components/Scheduler/index.js + 12 modules",
               "type": "harmony import specifier",
               "userRequest": "./styles.m.css",
-              "loc": "192:17-23"
+              "loc": "219:17-23"
             }
           ],
           "usedExports": [
@@ -1840,9 +1849,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v1.js",
-          "issuerId": 27,
-          "issuerName": "./node_modules/uuid/v1.js",
+          "issuer": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v4.js",
+          "issuerId": 28,
+          "issuerName": "./node_modules/uuid/v4.js",
           "issuerPath": [
             {
               "id": 15,
@@ -1861,13 +1870,13 @@
             },
             {
               "id": null,
-              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/index.js",
-              "name": "./source/REST/index.js"
+              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/index.js",
+              "name": "./source/instruments/index.js"
             },
             {
               "id": null,
-              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/api.js",
-              "name": "./source/REST/api.js"
+              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/helpers.js",
+              "name": "./source/instruments/helpers.js"
             },
             {
               "id": 3,
@@ -1875,9 +1884,9 @@
               "name": "./node_modules/uuid/index.js"
             },
             {
-              "id": 27,
-              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v1.js",
-              "name": "./node_modules/uuid/v1.js"
+              "id": 28,
+              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v4.js",
+              "name": "./node_modules/uuid/v4.js"
             }
           ],
           "failed": false,
@@ -1927,9 +1936,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v1.js",
-          "issuerId": 27,
-          "issuerName": "./node_modules/uuid/v1.js",
+          "issuer": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v4.js",
+          "issuerId": 28,
+          "issuerName": "./node_modules/uuid/v4.js",
           "issuerPath": [
             {
               "id": 15,
@@ -1948,13 +1957,13 @@
             },
             {
               "id": null,
-              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/index.js",
-              "name": "./source/REST/index.js"
+              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/index.js",
+              "name": "./source/instruments/index.js"
             },
             {
               "id": null,
-              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/api.js",
-              "name": "./source/REST/api.js"
+              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/helpers.js",
+              "name": "./source/instruments/helpers.js"
             },
             {
               "id": 3,
@@ -1962,9 +1971,9 @@
               "name": "./node_modules/uuid/index.js"
             },
             {
-              "id": 27,
-              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v1.js",
-              "name": "./node_modules/uuid/v1.js"
+              "id": 28,
+              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v4.js",
+              "name": "./node_modules/uuid/v4.js"
             }
           ],
           "failed": false,
@@ -2264,7 +2273,7 @@
           "name": "./source/components/Scheduler/index.js + 12 modules",
           "index": 13,
           "index2": 41,
-          "size": 21193,
+          "size": 21723,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -2324,7 +2333,7 @@
               "name": "./source/components/Scheduler/index.js",
               "index": 13,
               "index2": 41,
-              "size": 6238,
+              "size": 6700,
               "cacheable": true,
               "built": true,
               "optional": false,
@@ -2380,7 +2389,7 @@
               "optimizationBailout": [
               ],
               "depth": 2,
-              "source": "function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\n// Core\nimport React, { Component } from 'react'; // Components\n\nimport Task from '../Task';\nimport Spinner from '../Spinner';\nimport Checkbox from '../../theme/assets/Checkbox'; // Instruments\n\nimport Styles from './styles.m.css';\nimport { api } from '../../REST'; // ! Импорт модуля API должен иметь именно такой вид (import { api } from '../../REST')\n\nimport { sortTasksByGroup } from '../../instruments';\nexport default class Scheduler extends Component {\n  constructor(...args) {\n    super(...args);\n    this.state = {\n      isTasksFetching: false,\n      tasksFilter: '',\n      newTaskMessage: '',\n      tasks: []\n    };\n\n    this._setTasksFetchingState = state => {\n      this.setState({\n        isTasksFetching: state\n      });\n    };\n\n    this._createTaskAsync = async event => {\n      const {\n        newTaskMessage\n      } = this.state; // TODO: a more complex check\n\n      if (newTaskMessage !== '') {\n        if (event) {\n          event.preventDefault();\n        }\n\n        this._setTasksFetchingState(true);\n\n        const task = await api.createTask(newTaskMessage);\n        this.setState(({\n          tasks\n        }) => ({\n          newTaskMessage: '',\n          tasks: sortTasksByGroup([task, ...tasks])\n        }));\n\n        this._setTasksFetchingState(false);\n      } else {\n        return null;\n      }\n    };\n\n    this._fetchTasksAsync = async () => {\n      this._setTasksFetchingState(true);\n\n      const tasks = await api.fetchTasks();\n      this.setState({\n        tasks: sortTasksByGroup(tasks)\n      });\n\n      this._setTasksFetchingState(false);\n    };\n\n    this._updateTaskAsync = async task => {\n      this._setTasksFetchingState(true);\n\n      const updatedTask = await api.updateTask(task);\n      this.setState(({\n        tasks\n      }) => {\n        const updatedTaskList = tasks.map(currTask => updatedTask.find(ut => ut.id === currTask.id) || currTask);\n        return {\n          newTaskMessage: '',\n          tasks: sortTasksByGroup(updatedTaskList)\n        };\n      });\n\n      this._setTasksFetchingState(false);\n    };\n\n    this._removeTaskAsync = async id => {\n      this._setTasksFetchingState(true);\n\n      await api.removeTask(id);\n      this.setState(({\n        tasks\n      }) => ({\n        tasks: tasks.filter(task => task.id !== id)\n      }));\n\n      this._setTasksFetchingState(false);\n    };\n\n    this._completeAllTasksAsync = async () => {\n      if (!this._getAllCompleted()) {\n        const {\n          tasks\n        } = this.state;\n        const uncompletedTasks = tasks.filter(task => task.completed === false); // Beyond stupid...\n\n        if (uncompletedTasks.length) {\n          this._setTasksFetchingState(true);\n\n          uncompletedTasks.forEach(task => task.completed = true);\n          const updatedTasks = await api.completeAllTasks(uncompletedTasks);\n          const updatedTaskList = tasks.map(currTask => updatedTasks.find(ut => ut.id === currTask.id) || currTask);\n          this.setState({\n            tasks: sortTasksByGroup(updatedTaskList)\n          });\n\n          this._setTasksFetchingState(false);\n        } else {\n          return null;\n        }\n      } else {\n        return null;\n      }\n    };\n\n    this._getAllCompleted = () => {\n      const {\n        tasks\n      } = this.state;\n      const completed = !tasks.some(task => task.completed === false);\n      return completed;\n    };\n\n    this._updateNewTaskMessage = event => {\n      this.setState({\n        newTaskMessage: event.target.value\n      });\n    };\n\n    this._updateTasksFilter = event => {\n      const tasksFilter = event.target.value.toLowerCase();\n      this.setState({\n        tasksFilter\n      });\n    };\n  }\n\n  componentDidMount() {\n    this._fetchTasksAsync();\n  }\n\n  render() {\n    const {\n      tasks,\n      newTaskMessage,\n      isTasksFetching,\n      tasksFilter\n    } = this.state;\n    const filteredTasks = tasks.filter(task => task.message.toLowerCase().includes(tasksFilter));\n    const tasksJSX = filteredTasks.map(task => {\n      return React.createElement(Task, _extends({\n        key: task.id\n      }, task, {\n        _removeTaskAsync: this._removeTaskAsync,\n        _updateTaskAsync: this._updateTaskAsync\n      }));\n    });\n    return React.createElement(React.Fragment, null, React.createElement(Spinner, {\n      isSpinning: isTasksFetching\n    }), React.createElement(\"section\", {\n      className: Styles.scheduler\n    }, React.createElement(\"main\", null, React.createElement(\"header\", null, React.createElement(\"h1\", null, \"\\u041F\\u043B\\u0430\\u043D\\u0438\\u0440\\u043E\\u0432\\u0449\\u0438\\u043A \\u0437\\u0430\\u0434\\u0430\\u0447\"), React.createElement(\"input\", {\n      placeholder: \"\\u041F\\u043E\\u0438\\u0441\\u043A\",\n      type: \"search\",\n      value: tasksFilter,\n      onChange: this._updateTasksFilter\n    })), React.createElement(\"section\", null, React.createElement(\"form\", {\n      onSubmit: this._createTaskAsync\n    }, React.createElement(\"input\", {\n      maxLength: \"50\",\n      placeholder: \"\\u041E\\u043F\\u0438\\u0441\\u0430\\u043D\\u0438\\u0435 \\u043D\\u043E\\u0432\\u043E\\u0439 \\u0437\\u0430\\u0434\\u0430\\u0447\\u0438\",\n      type: \"text\",\n      value: newTaskMessage,\n      onChange: this._updateNewTaskMessage\n    }), React.createElement(\"button\", {\n      onClick: this._createTaskAsync\n    }, \"\\u0414\\u043E\\u0431\\u0430\\u0432\\u0438\\u0442\\u044C \\u0437\\u0430\\u0434\\u0430\\u0447\\u0443\")), React.createElement(\"div\", null, React.createElement(\"ul\", null, tasksJSX))), React.createElement(\"footer\", null, React.createElement(Checkbox, {\n      inlineBlock: true,\n      checked: !tasks.some(task => task.completed === false),\n      className: Styles.toggleTaskFavoriteState,\n      color1: \"#000\",\n      color2: \"#fff\",\n      onClick: this._completeAllTasksAsync\n    }), React.createElement(\"span\", {\n      className: Styles.completeAllTasks\n    }, \"\\u0412\\u0441\\u0435 \\u0437\\u0430\\u0434\\u0430\\u0447\\u0438 \\u0432\\u044B\\u043F\\u043E\\u043B\\u043D\\u0435\\u043D\\u044B\")))));\n  }\n\n}"
+              "source": "function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\n// Core\nimport React, { Component } from 'react'; // Components\n\nimport Task from '../Task';\nimport Spinner from '../Spinner';\nimport Checkbox from '../../theme/assets/Checkbox'; // Instruments\n\nimport Styles from './styles.m.css';\nimport { api } from '../../REST'; // ! Импорт модуля API должен иметь именно такой вид (import { api } from '../../REST')\n\nimport { sortTasksByGroup } from '../../instruments';\nexport default class Scheduler extends Component {\n  constructor(...args) {\n    super(...args);\n    this.state = {\n      isTasksFetching: false,\n      tasksFilter: '',\n      newTaskMessage: '',\n      tasks: []\n    };\n\n    this._setTasksFetchingState = state => {\n      this.setState({\n        isTasksFetching: state\n      });\n    };\n\n    this._createTaskAsync = async event => {\n      const {\n        newTaskMessage\n      } = this.state; // TODO: a more complex check\n\n      if (newTaskMessage) {\n        if (event) {\n          event.preventDefault();\n        }\n\n        this._setTasksFetchingState(true);\n\n        let task;\n\n        try {\n          task = await api.createTask(newTaskMessage);\n        } catch (error) {\n          if (!task || !task.length) {\n            throw error;\n          }\n        }\n\n        this.setState(({\n          tasks\n        }) => ({\n          newTaskMessage: '',\n          tasks: sortTasksByGroup([task, ...tasks])\n        }));\n\n        this._setTasksFetchingState(false);\n      } else {\n        return null;\n      }\n    };\n\n    this._fetchTasksAsync = async () => {\n      this._setTasksFetchingState(true);\n\n      const tasks = await api.fetchTasks();\n      this.setState({\n        tasks: sortTasksByGroup(tasks)\n      });\n\n      this._setTasksFetchingState(false);\n    };\n\n    this._updateTaskAsync = async task => {\n      this._setTasksFetchingState(true);\n\n      let updatedTask;\n\n      try {\n        updatedTask = await api.updateTask(task);\n      } catch (error) {\n        if (!updatedTask || !updatedTask.length) {\n          throw error;\n        }\n      }\n\n      this.setState(({\n        tasks\n      }) => {\n        const updatedTaskList = tasks.map(currTask => updatedTask.find(updTask => updTask.id === currTask.id) || currTask);\n        return {\n          newTaskMessage: '',\n          tasks: sortTasksByGroup(updatedTaskList)\n        };\n      });\n\n      this._setTasksFetchingState(false);\n    };\n\n    this._removeTaskAsync = async id => {\n      this._setTasksFetchingState(true);\n\n      await api.removeTask(id);\n      this.setState(({\n        tasks\n      }) => ({\n        tasks: tasks.filter(task => task.id !== id)\n      }));\n\n      this._setTasksFetchingState(false);\n    };\n\n    this._completeAllTasksAsync = async () => {\n      if (!this._getAllCompleted()) {\n        const {\n          tasks\n        } = this.state;\n        const uncompletedTasks = tasks.filter(task => !task.completed);\n\n        if (uncompletedTasks.length) {\n          this._setTasksFetchingState(true);\n\n          uncompletedTasks.forEach(task => task.completed = true);\n          let updatedTasks;\n\n          try {\n            updatedTasks = await api.completeAllTasks(uncompletedTasks);\n          } catch (error) {\n            if (!updatedTasks || updatedTasks.length !== uncompletedTasks.length) {\n              throw error;\n            }\n          }\n\n          const updatedTaskList = tasks.map(currTask => updatedTasks.find(updTask => updTask.id === currTask.id) || currTask);\n          this.setState({\n            tasks: sortTasksByGroup(updatedTaskList)\n          });\n\n          this._setTasksFetchingState(false);\n        } else {\n          return null;\n        }\n      } else {\n        return null;\n      }\n    };\n\n    this._getAllCompleted = () => {\n      const {\n        tasks\n      } = this.state;\n      const completed = !tasks.some(task => !task.completed);\n      return completed;\n    };\n\n    this._updateNewTaskMessage = event => {\n      this.setState({\n        newTaskMessage: event.target.value\n      });\n    };\n\n    this._updateTasksFilter = event => {\n      const tasksFilter = event.target.value.toLowerCase();\n      this.setState({\n        tasksFilter\n      });\n    };\n  }\n\n  componentDidMount() {\n    this._fetchTasksAsync();\n  }\n\n  render() {\n    const {\n      tasks,\n      newTaskMessage,\n      isTasksFetching,\n      tasksFilter\n    } = this.state;\n    const filteredTasks = tasks.filter(task => task.message.toLowerCase().includes(tasksFilter));\n    const tasksJSX = filteredTasks.map(task => {\n      return React.createElement(Task, _extends({\n        key: task.id\n      }, task, {\n        _removeTaskAsync: this._removeTaskAsync,\n        _updateTaskAsync: this._updateTaskAsync\n      }));\n    });\n    return React.createElement(React.Fragment, null, React.createElement(Spinner, {\n      isSpinning: isTasksFetching\n    }), React.createElement(\"section\", {\n      className: Styles.scheduler\n    }, React.createElement(\"main\", null, React.createElement(\"header\", null, React.createElement(\"h1\", null, \"\\u041F\\u043B\\u0430\\u043D\\u0438\\u0440\\u043E\\u0432\\u0449\\u0438\\u043A \\u0437\\u0430\\u0434\\u0430\\u0447\"), React.createElement(\"input\", {\n      placeholder: \"\\u041F\\u043E\\u0438\\u0441\\u043A\",\n      type: \"search\",\n      value: tasksFilter,\n      onChange: this._updateTasksFilter\n    })), React.createElement(\"section\", null, React.createElement(\"form\", {\n      onSubmit: this._createTaskAsync\n    }, React.createElement(\"input\", {\n      maxLength: 50,\n      placeholder: \"\\u041E\\u043F\\u0438\\u0441\\u0430\\u043D\\u0438\\u0435 \\u043D\\u043E\\u0432\\u043E\\u0439 \\u0437\\u0430\\u0434\\u0430\\u0447\\u0438\",\n      type: \"text\",\n      value: newTaskMessage,\n      onChange: this._updateNewTaskMessage\n    }), React.createElement(\"button\", {\n      onClick: this._createTaskAsync\n    }, \"\\u0414\\u043E\\u0431\\u0430\\u0432\\u0438\\u0442\\u044C \\u0437\\u0430\\u0434\\u0430\\u0447\\u0443\")), React.createElement(\"div\", null, React.createElement(\"ul\", null, tasksJSX))), React.createElement(\"footer\", null, React.createElement(Checkbox, {\n      inlineBlock: true,\n      checked: !tasks.some(task => !task.completed),\n      className: Styles.toggleTaskFavoriteState,\n      color1: \"#000\",\n      color2: \"#fff\",\n      onClick: this._completeAllTasksAsync\n    }), React.createElement(\"span\", {\n      className: Styles.completeAllTasks\n    }, \"\\u0412\\u0441\\u0435 \\u0437\\u0430\\u0434\\u0430\\u0447\\u0438 \\u0432\\u044B\\u043F\\u043E\\u043B\\u043D\\u0435\\u043D\\u044B\")))));\n  }\n\n}"
             },
             {
               "id": null,
@@ -2446,7 +2455,7 @@
                   "moduleName": "./source/components/Scheduler/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../../instruments",
-                  "loc": "47:17-33"
+                  "loc": "56:17-33"
                 },
                 {
                   "moduleId": null,
@@ -2455,7 +2464,7 @@
                   "moduleName": "./source/components/Scheduler/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../../instruments",
-                  "loc": "61:15-31"
+                  "loc": "70:15-31"
                 },
                 {
                   "moduleId": null,
@@ -2464,7 +2473,7 @@
                   "moduleName": "./source/components/Scheduler/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../../instruments",
-                  "loc": "77:17-33"
+                  "loc": "95:17-33"
                 },
                 {
                   "moduleId": null,
@@ -2482,7 +2491,7 @@
                   "moduleName": "./source/components/Scheduler/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../../instruments",
-                  "loc": "111:19-35"
+                  "loc": "138:19-35"
                 }
               ],
               "usedExports": [
@@ -2564,7 +2573,7 @@
                   "moduleName": "./source/components/Task/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../../theme/assets/Checkbox",
-                  "loc": "149:27-35"
+                  "loc": "161:27-35"
                 },
                 {
                   "moduleId": null,
@@ -2573,7 +2582,7 @@
                   "moduleName": "./source/components/Scheduler/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../../theme/assets/Checkbox",
-                  "loc": "184:232-240"
+                  "loc": "211:232-240"
                 }
               ],
               "usedExports": [
@@ -2593,7 +2602,7 @@
               "name": "./source/components/Task/index.js",
               "index": 14,
               "index2": 32,
-              "size": 4747,
+              "size": 4813,
               "cacheable": true,
               "built": true,
               "optional": false,
@@ -2642,7 +2651,7 @@
                   "moduleName": "./source/components/Scheduler/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../Task",
-                  "loc": "158:33-37"
+                  "loc": "185:33-37"
                 }
               ],
               "usedExports": [
@@ -2654,7 +2663,7 @@
               "optimizationBailout": [
               ],
               "depth": 3,
-              "source": "// Core\nimport React, { PureComponent } from 'react'; // Components\n\nimport Checkbox from '../../theme/assets/Checkbox';\nimport Star from '../../theme/assets/Star';\nimport Edit from '../../theme/assets/Edit';\nimport Remove from '../../theme/assets/Remove'; // Instruments\n\nimport Styles from './styles.m.css';\nexport default class Task extends PureComponent {\n  constructor(props) {\n    super(props);\n\n    this._getTaskShape = ({\n      id = this.props.id,\n      completed = this.props.completed,\n      favorite = this.props.favorite,\n      message = this.props.message\n    }) => ({\n      id,\n      completed,\n      favorite,\n      message\n    });\n\n    this._toggleTaskCompletedState = () => {\n      this.setState((state, {\n        completed\n      }) => ({\n        completed: !completed\n      }), this._updateTask);\n    };\n\n    this._toggleTaskFavoriteState = () => {\n      this.setState((state, {\n        favorite\n      }) => ({\n        favorite: !favorite\n      }), this._updateTask);\n    };\n\n    this._updateNewTaskMessage = event => {\n      this.setState({\n        newTaskMessage: event.target.value\n      });\n    };\n\n    this._setTaskEditingState = () => {\n      // A fallback option in case of esc press\n      // or second task edit toggle\n      if (!this.state.isTaskEditing) {\n        this.savedMessage = this.props.message;\n      }\n\n      this.setState(({\n        isTaskEditing\n      }) => {\n        if (isTaskEditing) {\n          return {\n            isTaskEditing: !isTaskEditing,\n            newTaskMessage: this.savedMessage\n          };\n        }\n\n        return {\n          isTaskEditing: !isTaskEditing\n        };\n      }, this._setTaskInputFocus);\n    };\n\n    this._handleInputDoubleClick = () => {\n      if (!this.state.isTaskEditing) {\n        this._setTaskEditingState();\n      }\n    };\n\n    this._updateTaskMessageOnKeyDown = event => {\n      const enterKeyPressed = event.key === 'Enter' || event.keyCode === 13;\n      const escapeKeyPressed = event.key === 'Escape' || event.keyCode === 27;\n\n      if (enterKeyPressed) {\n        this.setState(({\n          isTaskEditing,\n          newTaskMessage\n        }) => ({\n          message: newTaskMessage,\n          isTaskEditing: !isTaskEditing\n        }), this._updateTask);\n      }\n\n      if (escapeKeyPressed) {\n        this._cancelUpdatingTaskMessage();\n      }\n    };\n\n    this._updateTaskMessageOnClick = () => {};\n\n    this._cancelUpdatingTaskMessage = () => {\n      this.setState(({\n        isTaskEditing\n      }) => ({\n        newTaskMessage: this.savedMessage,\n        isTaskEditing: !isTaskEditing\n      }));\n    };\n\n    this._setTaskInputFocus = () => {\n      this.taskInput.focus();\n    };\n\n    this._updateTask = () => {\n      const taskState = this._getTaskShape(this.state);\n\n      const {\n        _updateTaskAsync\n      } = this.props;\n\n      _updateTaskAsync([taskState]);\n    };\n\n    this._removeTask = () => {\n      const {\n        id,\n        _removeTaskAsync\n      } = this.props;\n\n      _removeTaskAsync(id);\n    };\n\n    this.state = {\n      isTaskEditing: false,\n      newTaskMessage: props.message\n    };\n  }\n\n  render() {\n    const {\n      completed,\n      favorite\n    } = this.props;\n    const {\n      isTaskEditing,\n      newTaskMessage\n    } = this.state;\n    return React.createElement(\"li\", {\n      className: completed ? `${Styles.task} ${Styles.completed}` : Styles.task\n    }, React.createElement(\"div\", {\n      className: Styles.content\n    }, React.createElement(Checkbox, {\n      inlineBlock: true,\n      checked: completed,\n      className: Styles.toggleTaskCompletedState,\n      color1: \"#3B8EF3\",\n      color2: \"#fff\",\n      onClick: this._toggleTaskCompletedState\n    }), React.createElement(\"div\", {\n      onDoubleClick: this._handleInputDoubleClick\n    }, React.createElement(\"input\", {\n      disabled: !isTaskEditing,\n      maxLength: \"50\",\n      ref: input => {\n        this.taskInput = input;\n      },\n      type: \"text\",\n      value: newTaskMessage,\n      onChange: this._updateNewTaskMessage,\n      onKeyDown: this._updateTaskMessageOnKeyDown\n    }))), React.createElement(\"div\", {\n      className: Styles.actions\n    }, React.createElement(Star, {\n      inlineBlock: true,\n      checked: favorite,\n      className: Styles.toggleTaskFavoriteState,\n      color1: \"#3B8EF3\",\n      color2: \"#000\",\n      onClick: this._toggleTaskFavoriteState\n    }), React.createElement(Edit, {\n      inlineBlock: true,\n      className: Styles.updateTaskMessageOnClick,\n      color1: \"#3B8EF3\",\n      color2: \"#000\",\n      onClick: this._setTaskEditingState\n    }), React.createElement(Remove, {\n      inlineBlock: true,\n      className: Styles.removeTask,\n      color1: \"#3B8EF3\",\n      color2: \"#000\",\n      onClick: this._removeTask\n    })));\n  }\n\n}"
+              "source": "// Core\nimport React, { PureComponent } from 'react'; // Components\n\nimport Checkbox from '../../theme/assets/Checkbox';\nimport Star from '../../theme/assets/Star';\nimport Edit from '../../theme/assets/Edit';\nimport Remove from '../../theme/assets/Remove'; // Instruments\n\nimport Styles from './styles.m.css';\nexport default class Task extends PureComponent {\n  constructor(...args) {\n    super(...args);\n    this.state = {\n      isTaskEditing: false,\n      newMessage: this.props.message\n    };\n    this.taskInput = React.createRef();\n\n    this._getTaskShape = ({\n      id = this.props.id,\n      completed = this.props.completed,\n      favorite = this.props.favorite,\n      message = this.props.message\n    }) => ({\n      id,\n      completed,\n      favorite,\n      message\n    });\n\n    this._toggleTaskCompletedState = () => {\n      const {\n        completed,\n        _updateTaskAsync\n      } = this.props;\n\n      _updateTaskAsync(this._getTaskShape({\n        completed: !completed\n      }));\n    };\n\n    this._toggleTaskFavoriteState = () => {\n      const {\n        favorite,\n        _updateTaskAsync\n      } = this.props;\n\n      _updateTaskAsync(this._getTaskShape({\n        favorite: !favorite\n      }));\n    };\n\n    this._updateNewTaskMessage = event => {\n      this.setState({\n        newMessage: event.target.value\n      });\n    };\n\n    this._setTaskEditingState = editState => {\n      if (editState) {\n        this.setState({\n          isTaskEditing: true\n        }, this._setTaskInputFocus);\n      } else {\n        this.setState({\n          isTaskEditing: false\n        });\n      }\n    };\n\n    this._handleInputDoubleClick = () => {\n      if (!this.state.isTaskEditing) {\n        this._setTaskEditingState(true);\n      }\n    };\n\n    this._updateTaskMessageOnKeyDown = event => {\n      const enterKeyPressed = event.key === 'Enter' || event.keyCode === 13;\n      const escapeKeyPressed = event.key === 'Escape' || event.keyCode === 27;\n\n      if (enterKeyPressed) {\n        if (this.state.newMessage) {\n          this._updateTask();\n        } else {\n          return null;\n        }\n      }\n\n      if (escapeKeyPressed) {\n        this._cancelUpdatingTaskMessage();\n      }\n    };\n\n    this._updateTaskMessageOnClick = () => {\n      const {\n        isTaskEditing\n      } = this.state;\n\n      if (isTaskEditing) {\n        this._updateTask();\n\n        return null;\n      }\n\n      this._setTaskEditingState(true);\n    };\n\n    this._cancelUpdatingTaskMessage = () => {\n      this.setState({\n        newMessage: this.props.message,\n        isTaskEditing: false\n      });\n    };\n\n    this._setTaskInputFocus = () => {\n      this.taskInput.current.focus();\n    };\n\n    this._updateTask = () => {\n      const {\n        message,\n        _updateTaskAsync\n      } = this.props;\n\n      if (this.state.newMessage !== message) {\n        _updateTaskAsync(this._getTaskShape({\n          message: this.state.newMessage\n        }));\n\n        this._setTaskEditingState(false);\n      } else {\n        this._setTaskEditingState(false);\n\n        return null;\n      }\n    };\n\n    this._removeTask = () => {\n      const {\n        id,\n        _removeTaskAsync\n      } = this.props;\n\n      _removeTaskAsync(id);\n    };\n  }\n\n  render() {\n    const {\n      completed,\n      favorite\n    } = this.props;\n    const {\n      isTaskEditing,\n      newMessage\n    } = this.state;\n    return React.createElement(\"li\", {\n      className: completed ? `${Styles.task} ${Styles.completed}` : Styles.task\n    }, React.createElement(\"div\", {\n      className: Styles.content\n    }, React.createElement(Checkbox, {\n      inlineBlock: true,\n      checked: completed,\n      className: Styles.toggleTaskCompletedState,\n      color1: \"#3B8EF3\",\n      color2: \"#fff\",\n      onClick: this._toggleTaskCompletedState\n    }), React.createElement(\"div\", {\n      onDoubleClick: this._handleInputDoubleClick\n    }, React.createElement(\"input\", {\n      disabled: !isTaskEditing,\n      maxLength: \"50\",\n      ref: this.taskInput,\n      type: \"text\",\n      value: newMessage,\n      onChange: this._updateNewTaskMessage,\n      onKeyDown: this._updateTaskMessageOnKeyDown\n    }))), React.createElement(\"div\", {\n      className: Styles.actions\n    }, React.createElement(Star, {\n      inlineBlock: true,\n      checked: favorite,\n      className: Styles.toggleTaskFavoriteState,\n      color1: \"#3B8EF3\",\n      color2: \"#000\",\n      onClick: this._toggleTaskFavoriteState\n    }), React.createElement(Edit, {\n      inlineBlock: true,\n      className: Styles.updateTaskMessageOnClick,\n      color1: \"#3B8EF3\",\n      color2: \"#000\",\n      onClick: this._updateTaskMessageOnClick\n    }), React.createElement(Remove, {\n      inlineBlock: true,\n      className: Styles.removeTask,\n      color1: \"#3B8EF3\",\n      color2: \"#000\",\n      onClick: this._removeTask\n    })));\n  }\n\n}"
             },
             {
               "id": null,
@@ -2711,7 +2720,7 @@
                   "moduleName": "./source/components/Scheduler/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../Spinner",
-                  "loc": "165:73-80"
+                  "loc": "192:73-80"
                 }
               ],
               "usedExports": [
@@ -2780,7 +2789,7 @@
                   "moduleName": "./source/components/Scheduler/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../../REST",
-                  "loc": "42:27-30"
+                  "loc": "45:23-26"
                 },
                 {
                   "moduleId": null,
@@ -2789,7 +2798,7 @@
                   "moduleName": "./source/components/Scheduler/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../../REST",
-                  "loc": "59:26-29"
+                  "loc": "68:26-29"
                 },
                 {
                   "moduleId": null,
@@ -2798,7 +2807,7 @@
                   "moduleName": "./source/components/Scheduler/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../../REST",
-                  "loc": "70:32-35"
+                  "loc": "82:28-31"
                 },
                 {
                   "moduleId": null,
@@ -2807,7 +2816,7 @@
                   "moduleName": "./source/components/Scheduler/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../../REST",
-                  "loc": "87:12-15"
+                  "loc": "105:12-15"
                 },
                 {
                   "moduleId": null,
@@ -2816,7 +2825,7 @@
                   "moduleName": "./source/components/Scheduler/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../../REST",
-                  "loc": "108:37-40"
+                  "loc": "129:33-36"
                 }
               ],
               "usedExports": [
@@ -3011,15 +3020,6 @@
                 },
                 {
                   "moduleId": null,
-                  "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/theme/assets/Edit.js",
-                  "module": "./source/theme/assets/Edit.js",
-                  "moduleName": "./source/theme/assets/Edit.js",
-                  "type": "harmony side effect evaluation",
-                  "userRequest": "instruments/withSvg",
-                  "loc": "4:0-46"
-                },
-                {
-                  "moduleId": null,
                   "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/theme/assets/Star.js",
                   "module": "./source/theme/assets/Star.js",
                   "moduleName": "./source/theme/assets/Star.js",
@@ -3035,6 +3035,15 @@
                   "type": "harmony side effect evaluation",
                   "userRequest": "../../instruments/withSvg",
                   "loc": "4:0-52"
+                },
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/theme/assets/Edit.js",
+                  "module": "./source/theme/assets/Edit.js",
+                  "moduleName": "./source/theme/assets/Edit.js",
+                  "type": "harmony side effect evaluation",
+                  "userRequest": "instruments/withSvg",
+                  "loc": "4:0-46"
                 },
                 {
                   "moduleId": null,
@@ -3144,7 +3153,7 @@
                   "moduleName": "./source/components/Task/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../../theme/assets/Star",
-                  "loc": "170:27-31"
+                  "loc": "180:27-31"
                 }
               ],
               "usedExports": [
@@ -3218,7 +3227,7 @@
                   "moduleName": "./source/components/Task/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../../theme/assets/Edit",
-                  "loc": "177:28-32"
+                  "loc": "187:28-32"
                 }
               ],
               "usedExports": [
@@ -3292,7 +3301,7 @@
                   "moduleName": "./source/components/Task/index.js",
                   "type": "harmony import specifier",
                   "userRequest": "../../theme/assets/Remove",
-                  "loc": "183:28-34"
+                  "loc": "193:28-34"
                 }
               ],
               "usedExports": [
@@ -3497,7 +3506,7 @@
               "name": "./source/REST/api.js",
               "index": 43,
               "index2": 39,
-              "size": 1783,
+              "size": 1785,
               "cacheable": true,
               "built": true,
               "optional": false,
@@ -3563,7 +3572,7 @@
               "optimizationBailout": [
               ],
               "depth": 4,
-              "source": "import { MAIN_URL, TOKEN } from './config';\nimport { BaseTaskModel } from '../instruments/helpers';\nimport { v4 } from 'uuid';\nexport const api = {\n  createTask: async newTaskMessage => {\n    const newTask = new BaseTaskModel(v4(), false, false, newTaskMessage);\n    const response = await fetch(MAIN_URL, {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json',\n        Authorization: TOKEN\n      },\n      body: JSON.stringify(newTask)\n    });\n    const {\n      data: task\n    } = await response.json();\n    return task;\n  },\n  fetchTasks: async () => {\n    const response = await fetch(MAIN_URL, {\n      method: 'GET',\n      headers: {\n        Authorization: TOKEN\n      }\n    });\n    const {\n      data: tasks\n    } = await response.json();\n    return tasks;\n  },\n  updateTask: async oldTask => {\n    const response = await fetch(MAIN_URL, {\n      method: 'PUT',\n      headers: {\n        'Content-Type': 'application/json',\n        Authorization: TOKEN\n      },\n      body: JSON.stringify(oldTask)\n    });\n    const {\n      data: tasks\n    } = await response.json();\n    return tasks;\n  },\n  removeTask: async id => {\n    const deleteUrl = `${MAIN_URL}/${id}`;\n    await fetch(deleteUrl, {\n      method: 'DELETE',\n      headers: {\n        Authorization: TOKEN\n      }\n    });\n  },\n  completeAllTasks: async oldTasks => {\n    const requests = oldTasks.map(task => fetch(MAIN_URL, {\n      method: 'PUT',\n      headers: {\n        'Content-Type': 'application/json',\n        Authorization: TOKEN\n      },\n      body: JSON.stringify([task])\n    }));\n    const tasks = await Promise.all(requests).then(responses => Promise.all(responses.map(r => r.json()))).then(result => result.map(r => r.data));\n    return tasks.reduce((a1, a2) => [...a1, ...a2]);\n  }\n};"
+              "source": "import { MAIN_URL, TOKEN } from './config';\nimport { BaseTaskModel } from '../instruments/helpers';\nimport { v4 } from 'uuid';\nexport const api = {\n  createTask: async newTaskMessage => {\n    const newTask = new BaseTaskModel(v4(), false, false, newTaskMessage);\n    const response = await fetch(MAIN_URL, {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json',\n        Authorization: TOKEN\n      },\n      body: JSON.stringify(newTask)\n    });\n    const {\n      data: task\n    } = await response.json();\n    return task;\n  },\n  fetchTasks: async () => {\n    const response = await fetch(MAIN_URL, {\n      method: 'GET',\n      headers: {\n        Authorization: TOKEN\n      }\n    });\n    const {\n      data: tasks\n    } = await response.json();\n    return tasks;\n  },\n  updateTask: async oldTask => {\n    const response = await fetch(MAIN_URL, {\n      method: 'PUT',\n      headers: {\n        'Content-Type': 'application/json',\n        Authorization: TOKEN\n      },\n      body: JSON.stringify([oldTask])\n    });\n    const {\n      data: tasks\n    } = await response.json();\n    return tasks;\n  },\n  removeTask: async id => {\n    const deleteUrl = `${MAIN_URL}/${id}`;\n    await fetch(deleteUrl, {\n      method: 'DELETE',\n      headers: {\n        Authorization: TOKEN\n      }\n    });\n  },\n  completeAllTasks: async oldTasks => {\n    const requests = oldTasks.map(task => fetch(MAIN_URL, {\n      method: 'PUT',\n      headers: {\n        'Content-Type': 'application/json',\n        Authorization: TOKEN\n      },\n      body: JSON.stringify([task])\n    }));\n    const tasks = await Promise.all(requests).then(responses => Promise.all(responses.map(r => r.json()))).then(result => result.map(r => r.data).reduce((a1, a2) => [...a1, ...a2]));\n    return tasks;\n  }\n};"
             }
           ],
           "filteredModules": 0
@@ -4337,13 +4346,13 @@
             },
             {
               "id": null,
-              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/index.js",
-              "name": "./source/REST/index.js"
+              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/index.js",
+              "name": "./source/instruments/index.js"
             },
             {
               "id": null,
-              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/api.js",
-              "name": "./source/REST/api.js"
+              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/helpers.js",
+              "name": "./source/instruments/helpers.js"
             },
             {
               "id": 3,
@@ -4410,13 +4419,13 @@
             },
             {
               "id": null,
-              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/index.js",
-              "name": "./source/REST/index.js"
+              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/index.js",
+              "name": "./source/instruments/index.js"
             },
             {
               "id": null,
-              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/api.js",
-              "name": "./source/REST/api.js"
+              "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/helpers.js",
+              "name": "./source/instruments/helpers.js"
             },
             {
               "id": 3,
@@ -4836,7 +4845,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony side effect evaluation",
           "userRequest": "react",
-          "loc": "2:0-45"
+          "loc": "2:0-41"
         },
         {
           "moduleId": 14,
@@ -4845,7 +4854,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony side effect evaluation",
           "userRequest": "react",
-          "loc": "2:0-41"
+          "loc": "2:0-45"
         },
         {
           "moduleId": 14,
@@ -5034,6 +5043,15 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
+          "loc": "17:21-26"
+        },
+        {
+          "moduleId": 14,
+          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+          "module": "./source/components/Scheduler/index.js + 12 modules",
+          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
           "loc": "17:52-57"
         },
         {
@@ -5097,7 +5115,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "145:11-16"
+          "loc": "157:11-16"
         },
         {
           "moduleId": 14,
@@ -5106,7 +5124,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "147:7-12"
+          "loc": "159:7-12"
         },
         {
           "moduleId": 14,
@@ -5115,7 +5133,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "149:7-12"
+          "loc": "161:7-12"
         },
         {
           "moduleId": 14,
@@ -5124,106 +5142,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "156:8-13"
-        },
-        {
-          "moduleId": 14,
-          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-          "module": "./source/components/Scheduler/index.js + 12 modules",
-          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "158:7-12"
-        },
-        {
-          "moduleId": 14,
-          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-          "module": "./source/components/Scheduler/index.js + 12 modules",
-          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "158:13-18"
-        },
-        {
-          "moduleId": 14,
-          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-          "module": "./source/components/Scheduler/index.js + 12 modules",
-          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "165:11-16"
-        },
-        {
-          "moduleId": 14,
-          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-          "module": "./source/components/Scheduler/index.js + 12 modules",
-          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "165:31-36"
-        },
-        {
-          "moduleId": 14,
-          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-          "module": "./source/components/Scheduler/index.js + 12 modules",
-          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "165:53-58"
-        },
-        {
-          "moduleId": 14,
-          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-          "module": "./source/components/Scheduler/index.js + 12 modules",
-          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "167:8-13"
-        },
-        {
-          "moduleId": 14,
-          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-          "module": "./source/components/Scheduler/index.js + 12 modules",
-          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "168:10-15"
-        },
-        {
-          "moduleId": 14,
-          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-          "module": "./source/components/Scheduler/index.js + 12 modules",
-          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "169:7-12"
-        },
-        {
-          "moduleId": 14,
-          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-          "module": "./source/components/Scheduler/index.js + 12 modules",
-          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "169:41-46"
-        },
-        {
-          "moduleId": 14,
-          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-          "module": "./source/components/Scheduler/index.js + 12 modules",
-          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "169:77-82"
-        },
-        {
-          "moduleId": 14,
-          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-          "module": "./source/components/Scheduler/index.js + 12 modules",
-          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "169:211-216"
+          "loc": "168:8-13"
         },
         {
           "moduleId": 14,
@@ -5241,7 +5160,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "174:9-14"
+          "loc": "178:10-15"
         },
         {
           "moduleId": 14,
@@ -5250,7 +5169,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "174:46-51"
+          "loc": "180:7-12"
         },
         {
           "moduleId": 14,
@@ -5259,7 +5178,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "176:7-12"
+          "loc": "185:13-18"
         },
         {
           "moduleId": 14,
@@ -5268,7 +5187,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "177:8-13"
+          "loc": "187:8-13"
         },
         {
           "moduleId": 14,
@@ -5277,7 +5196,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "182:8-13"
+          "loc": "192:11-16"
         },
         {
           "moduleId": 14,
@@ -5286,7 +5205,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "183:8-13"
+          "loc": "192:31-36"
         },
         {
           "moduleId": 14,
@@ -5295,7 +5214,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "184:98-103"
+          "loc": "192:53-58"
         },
         {
           "moduleId": 14,
@@ -5304,7 +5223,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "184:131-136"
+          "loc": "193:8-13"
         },
         {
           "moduleId": 14,
@@ -5313,7 +5232,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "184:176-181"
+          "loc": "194:8-13"
         },
         {
           "moduleId": 14,
@@ -5322,7 +5241,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "184:212-217"
+          "loc": "196:7-12"
         },
         {
           "moduleId": 14,
@@ -5331,7 +5250,106 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "191:8-13"
+          "loc": "196:41-46"
+        },
+        {
+          "moduleId": 14,
+          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+          "module": "./source/components/Scheduler/index.js + 12 modules",
+          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "196:77-82"
+        },
+        {
+          "moduleId": 14,
+          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+          "module": "./source/components/Scheduler/index.js + 12 modules",
+          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "196:211-216"
+        },
+        {
+          "moduleId": 14,
+          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+          "module": "./source/components/Scheduler/index.js + 12 modules",
+          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "201:9-14"
+        },
+        {
+          "moduleId": 14,
+          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+          "module": "./source/components/Scheduler/index.js + 12 modules",
+          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "201:46-51"
+        },
+        {
+          "moduleId": 14,
+          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+          "module": "./source/components/Scheduler/index.js + 12 modules",
+          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "203:7-12"
+        },
+        {
+          "moduleId": 14,
+          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+          "module": "./source/components/Scheduler/index.js + 12 modules",
+          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "209:8-13"
+        },
+        {
+          "moduleId": 14,
+          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+          "module": "./source/components/Scheduler/index.js + 12 modules",
+          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "211:98-103"
+        },
+        {
+          "moduleId": 14,
+          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+          "module": "./source/components/Scheduler/index.js + 12 modules",
+          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "211:131-136"
+        },
+        {
+          "moduleId": 14,
+          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+          "module": "./source/components/Scheduler/index.js + 12 modules",
+          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "211:176-181"
+        },
+        {
+          "moduleId": 14,
+          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+          "module": "./source/components/Scheduler/index.js + 12 modules",
+          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "211:212-217"
+        },
+        {
+          "moduleId": 14,
+          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+          "module": "./source/components/Scheduler/index.js + 12 modules",
+          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "218:8-13"
         },
         {
           "moduleId": 15,
@@ -5439,7 +5457,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "./styles.m.css",
-          "loc": "146:32-38"
+          "loc": "158:32-38"
         },
         {
           "moduleId": 14,
@@ -5448,7 +5466,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "./styles.m.css",
-          "loc": "146:47-53"
+          "loc": "158:47-53"
         },
         {
           "moduleId": 14,
@@ -5457,7 +5475,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "./styles.m.css",
-          "loc": "146:68-74"
+          "loc": "158:68-74"
         },
         {
           "moduleId": 14,
@@ -5466,7 +5484,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "./styles.m.css",
-          "loc": "148:17-23"
+          "loc": "160:17-23"
         },
         {
           "moduleId": 14,
@@ -5475,25 +5493,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "./styles.m.css",
-          "loc": "152:17-23"
-        },
-        {
-          "moduleId": 14,
-          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-          "module": "./source/components/Scheduler/index.js + 12 modules",
-          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-          "type": "harmony import specifier",
-          "userRequest": "./styles.m.css",
-          "loc": "169:17-23"
-        },
-        {
-          "moduleId": 14,
-          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
-          "module": "./source/components/Scheduler/index.js + 12 modules",
-          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
-          "type": "harmony import specifier",
-          "userRequest": "./styles.m.css",
-          "loc": "173:17-23"
+          "loc": "164:17-23"
         },
         {
           "moduleId": 14,
@@ -5511,7 +5511,25 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "./styles.m.css",
-          "loc": "185:17-23"
+          "loc": "183:17-23"
+        },
+        {
+          "moduleId": 14,
+          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+          "module": "./source/components/Scheduler/index.js + 12 modules",
+          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+          "type": "harmony import specifier",
+          "userRequest": "./styles.m.css",
+          "loc": "189:17-23"
+        },
+        {
+          "moduleId": 14,
+          "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/components/Scheduler/index.js 941ea30891f3f92eb6c79481cb069a15",
+          "module": "./source/components/Scheduler/index.js + 12 modules",
+          "moduleName": "./source/components/Scheduler/index.js + 12 modules",
+          "type": "harmony import specifier",
+          "userRequest": "./styles.m.css",
+          "loc": "195:17-23"
         }
       ],
       "usedExports": [
@@ -5660,9 +5678,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/api.js",
+      "issuer": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/helpers.js",
       "issuerId": null,
-      "issuerName": "./source/REST/api.js",
+      "issuerName": "./source/instruments/helpers.js",
       "issuerPath": [
         {
           "id": 15,
@@ -5681,13 +5699,13 @@
         },
         {
           "id": null,
-          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/index.js",
-          "name": "./source/REST/index.js"
+          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/index.js",
+          "name": "./source/instruments/index.js"
         },
         {
           "id": null,
-          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/api.js",
-          "name": "./source/REST/api.js"
+          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/helpers.js",
+          "name": "./source/instruments/helpers.js"
         }
       ],
       "failed": false,
@@ -5799,7 +5817,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "./styles.m.css",
-          "loc": "168:17-23"
+          "loc": "195:17-23"
         },
         {
           "moduleId": 14,
@@ -5808,7 +5826,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "./styles.m.css",
-          "loc": "187:17-23"
+          "loc": "214:17-23"
         },
         {
           "moduleId": 14,
@@ -5817,7 +5835,7 @@
           "moduleName": "./source/components/Scheduler/index.js + 12 modules",
           "type": "harmony import specifier",
           "userRequest": "./styles.m.css",
-          "loc": "192:17-23"
+          "loc": "219:17-23"
         }
       ],
       "usedExports": [
@@ -6086,9 +6104,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v1.js",
-      "issuerId": 27,
-      "issuerName": "./node_modules/uuid/v1.js",
+      "issuer": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v4.js",
+      "issuerId": 28,
+      "issuerName": "./node_modules/uuid/v4.js",
       "issuerPath": [
         {
           "id": 15,
@@ -6107,13 +6125,13 @@
         },
         {
           "id": null,
-          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/index.js",
-          "name": "./source/REST/index.js"
+          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/index.js",
+          "name": "./source/instruments/index.js"
         },
         {
           "id": null,
-          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/api.js",
-          "name": "./source/REST/api.js"
+          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/helpers.js",
+          "name": "./source/instruments/helpers.js"
         },
         {
           "id": 3,
@@ -6121,9 +6139,9 @@
           "name": "./node_modules/uuid/index.js"
         },
         {
-          "id": 27,
-          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v1.js",
-          "name": "./node_modules/uuid/v1.js"
+          "id": 28,
+          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v4.js",
+          "name": "./node_modules/uuid/v4.js"
         }
       ],
       "failed": false,
@@ -6173,9 +6191,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v1.js",
-      "issuerId": 27,
-      "issuerName": "./node_modules/uuid/v1.js",
+      "issuer": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v4.js",
+      "issuerId": 28,
+      "issuerName": "./node_modules/uuid/v4.js",
       "issuerPath": [
         {
           "id": 15,
@@ -6194,13 +6212,13 @@
         },
         {
           "id": null,
-          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/index.js",
-          "name": "./source/REST/index.js"
+          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/index.js",
+          "name": "./source/instruments/index.js"
         },
         {
           "id": null,
-          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/api.js",
-          "name": "./source/REST/api.js"
+          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/helpers.js",
+          "name": "./source/instruments/helpers.js"
         },
         {
           "id": 3,
@@ -6208,9 +6226,9 @@
           "name": "./node_modules/uuid/index.js"
         },
         {
-          "id": 27,
-          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v1.js",
-          "name": "./node_modules/uuid/v1.js"
+          "id": 28,
+          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/uuid/v4.js",
+          "name": "./node_modules/uuid/v4.js"
         }
       ],
       "failed": false,
@@ -6510,7 +6528,7 @@
       "name": "./source/components/Scheduler/index.js + 12 modules",
       "index": 13,
       "index2": 41,
-      "size": 21193,
+      "size": 21723,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -6570,7 +6588,7 @@
           "name": "./source/components/Scheduler/index.js",
           "index": 13,
           "index2": 41,
-          "size": 6238,
+          "size": 6700,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -6626,7 +6644,7 @@
           "optimizationBailout": [
           ],
           "depth": 2,
-          "source": "function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\n// Core\nimport React, { Component } from 'react'; // Components\n\nimport Task from '../Task';\nimport Spinner from '../Spinner';\nimport Checkbox from '../../theme/assets/Checkbox'; // Instruments\n\nimport Styles from './styles.m.css';\nimport { api } from '../../REST'; // ! Импорт модуля API должен иметь именно такой вид (import { api } from '../../REST')\n\nimport { sortTasksByGroup } from '../../instruments';\nexport default class Scheduler extends Component {\n  constructor(...args) {\n    super(...args);\n    this.state = {\n      isTasksFetching: false,\n      tasksFilter: '',\n      newTaskMessage: '',\n      tasks: []\n    };\n\n    this._setTasksFetchingState = state => {\n      this.setState({\n        isTasksFetching: state\n      });\n    };\n\n    this._createTaskAsync = async event => {\n      const {\n        newTaskMessage\n      } = this.state; // TODO: a more complex check\n\n      if (newTaskMessage !== '') {\n        if (event) {\n          event.preventDefault();\n        }\n\n        this._setTasksFetchingState(true);\n\n        const task = await api.createTask(newTaskMessage);\n        this.setState(({\n          tasks\n        }) => ({\n          newTaskMessage: '',\n          tasks: sortTasksByGroup([task, ...tasks])\n        }));\n\n        this._setTasksFetchingState(false);\n      } else {\n        return null;\n      }\n    };\n\n    this._fetchTasksAsync = async () => {\n      this._setTasksFetchingState(true);\n\n      const tasks = await api.fetchTasks();\n      this.setState({\n        tasks: sortTasksByGroup(tasks)\n      });\n\n      this._setTasksFetchingState(false);\n    };\n\n    this._updateTaskAsync = async task => {\n      this._setTasksFetchingState(true);\n\n      const updatedTask = await api.updateTask(task);\n      this.setState(({\n        tasks\n      }) => {\n        const updatedTaskList = tasks.map(currTask => updatedTask.find(ut => ut.id === currTask.id) || currTask);\n        return {\n          newTaskMessage: '',\n          tasks: sortTasksByGroup(updatedTaskList)\n        };\n      });\n\n      this._setTasksFetchingState(false);\n    };\n\n    this._removeTaskAsync = async id => {\n      this._setTasksFetchingState(true);\n\n      await api.removeTask(id);\n      this.setState(({\n        tasks\n      }) => ({\n        tasks: tasks.filter(task => task.id !== id)\n      }));\n\n      this._setTasksFetchingState(false);\n    };\n\n    this._completeAllTasksAsync = async () => {\n      if (!this._getAllCompleted()) {\n        const {\n          tasks\n        } = this.state;\n        const uncompletedTasks = tasks.filter(task => task.completed === false); // Beyond stupid...\n\n        if (uncompletedTasks.length) {\n          this._setTasksFetchingState(true);\n\n          uncompletedTasks.forEach(task => task.completed = true);\n          const updatedTasks = await api.completeAllTasks(uncompletedTasks);\n          const updatedTaskList = tasks.map(currTask => updatedTasks.find(ut => ut.id === currTask.id) || currTask);\n          this.setState({\n            tasks: sortTasksByGroup(updatedTaskList)\n          });\n\n          this._setTasksFetchingState(false);\n        } else {\n          return null;\n        }\n      } else {\n        return null;\n      }\n    };\n\n    this._getAllCompleted = () => {\n      const {\n        tasks\n      } = this.state;\n      const completed = !tasks.some(task => task.completed === false);\n      return completed;\n    };\n\n    this._updateNewTaskMessage = event => {\n      this.setState({\n        newTaskMessage: event.target.value\n      });\n    };\n\n    this._updateTasksFilter = event => {\n      const tasksFilter = event.target.value.toLowerCase();\n      this.setState({\n        tasksFilter\n      });\n    };\n  }\n\n  componentDidMount() {\n    this._fetchTasksAsync();\n  }\n\n  render() {\n    const {\n      tasks,\n      newTaskMessage,\n      isTasksFetching,\n      tasksFilter\n    } = this.state;\n    const filteredTasks = tasks.filter(task => task.message.toLowerCase().includes(tasksFilter));\n    const tasksJSX = filteredTasks.map(task => {\n      return React.createElement(Task, _extends({\n        key: task.id\n      }, task, {\n        _removeTaskAsync: this._removeTaskAsync,\n        _updateTaskAsync: this._updateTaskAsync\n      }));\n    });\n    return React.createElement(React.Fragment, null, React.createElement(Spinner, {\n      isSpinning: isTasksFetching\n    }), React.createElement(\"section\", {\n      className: Styles.scheduler\n    }, React.createElement(\"main\", null, React.createElement(\"header\", null, React.createElement(\"h1\", null, \"\\u041F\\u043B\\u0430\\u043D\\u0438\\u0440\\u043E\\u0432\\u0449\\u0438\\u043A \\u0437\\u0430\\u0434\\u0430\\u0447\"), React.createElement(\"input\", {\n      placeholder: \"\\u041F\\u043E\\u0438\\u0441\\u043A\",\n      type: \"search\",\n      value: tasksFilter,\n      onChange: this._updateTasksFilter\n    })), React.createElement(\"section\", null, React.createElement(\"form\", {\n      onSubmit: this._createTaskAsync\n    }, React.createElement(\"input\", {\n      maxLength: \"50\",\n      placeholder: \"\\u041E\\u043F\\u0438\\u0441\\u0430\\u043D\\u0438\\u0435 \\u043D\\u043E\\u0432\\u043E\\u0439 \\u0437\\u0430\\u0434\\u0430\\u0447\\u0438\",\n      type: \"text\",\n      value: newTaskMessage,\n      onChange: this._updateNewTaskMessage\n    }), React.createElement(\"button\", {\n      onClick: this._createTaskAsync\n    }, \"\\u0414\\u043E\\u0431\\u0430\\u0432\\u0438\\u0442\\u044C \\u0437\\u0430\\u0434\\u0430\\u0447\\u0443\")), React.createElement(\"div\", null, React.createElement(\"ul\", null, tasksJSX))), React.createElement(\"footer\", null, React.createElement(Checkbox, {\n      inlineBlock: true,\n      checked: !tasks.some(task => task.completed === false),\n      className: Styles.toggleTaskFavoriteState,\n      color1: \"#000\",\n      color2: \"#fff\",\n      onClick: this._completeAllTasksAsync\n    }), React.createElement(\"span\", {\n      className: Styles.completeAllTasks\n    }, \"\\u0412\\u0441\\u0435 \\u0437\\u0430\\u0434\\u0430\\u0447\\u0438 \\u0432\\u044B\\u043F\\u043E\\u043B\\u043D\\u0435\\u043D\\u044B\")))));\n  }\n\n}"
+          "source": "function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\n// Core\nimport React, { Component } from 'react'; // Components\n\nimport Task from '../Task';\nimport Spinner from '../Spinner';\nimport Checkbox from '../../theme/assets/Checkbox'; // Instruments\n\nimport Styles from './styles.m.css';\nimport { api } from '../../REST'; // ! Импорт модуля API должен иметь именно такой вид (import { api } from '../../REST')\n\nimport { sortTasksByGroup } from '../../instruments';\nexport default class Scheduler extends Component {\n  constructor(...args) {\n    super(...args);\n    this.state = {\n      isTasksFetching: false,\n      tasksFilter: '',\n      newTaskMessage: '',\n      tasks: []\n    };\n\n    this._setTasksFetchingState = state => {\n      this.setState({\n        isTasksFetching: state\n      });\n    };\n\n    this._createTaskAsync = async event => {\n      const {\n        newTaskMessage\n      } = this.state; // TODO: a more complex check\n\n      if (newTaskMessage) {\n        if (event) {\n          event.preventDefault();\n        }\n\n        this._setTasksFetchingState(true);\n\n        let task;\n\n        try {\n          task = await api.createTask(newTaskMessage);\n        } catch (error) {\n          if (!task || !task.length) {\n            throw error;\n          }\n        }\n\n        this.setState(({\n          tasks\n        }) => ({\n          newTaskMessage: '',\n          tasks: sortTasksByGroup([task, ...tasks])\n        }));\n\n        this._setTasksFetchingState(false);\n      } else {\n        return null;\n      }\n    };\n\n    this._fetchTasksAsync = async () => {\n      this._setTasksFetchingState(true);\n\n      const tasks = await api.fetchTasks();\n      this.setState({\n        tasks: sortTasksByGroup(tasks)\n      });\n\n      this._setTasksFetchingState(false);\n    };\n\n    this._updateTaskAsync = async task => {\n      this._setTasksFetchingState(true);\n\n      let updatedTask;\n\n      try {\n        updatedTask = await api.updateTask(task);\n      } catch (error) {\n        if (!updatedTask || !updatedTask.length) {\n          throw error;\n        }\n      }\n\n      this.setState(({\n        tasks\n      }) => {\n        const updatedTaskList = tasks.map(currTask => updatedTask.find(updTask => updTask.id === currTask.id) || currTask);\n        return {\n          newTaskMessage: '',\n          tasks: sortTasksByGroup(updatedTaskList)\n        };\n      });\n\n      this._setTasksFetchingState(false);\n    };\n\n    this._removeTaskAsync = async id => {\n      this._setTasksFetchingState(true);\n\n      await api.removeTask(id);\n      this.setState(({\n        tasks\n      }) => ({\n        tasks: tasks.filter(task => task.id !== id)\n      }));\n\n      this._setTasksFetchingState(false);\n    };\n\n    this._completeAllTasksAsync = async () => {\n      if (!this._getAllCompleted()) {\n        const {\n          tasks\n        } = this.state;\n        const uncompletedTasks = tasks.filter(task => !task.completed);\n\n        if (uncompletedTasks.length) {\n          this._setTasksFetchingState(true);\n\n          uncompletedTasks.forEach(task => task.completed = true);\n          let updatedTasks;\n\n          try {\n            updatedTasks = await api.completeAllTasks(uncompletedTasks);\n          } catch (error) {\n            if (!updatedTasks || updatedTasks.length !== uncompletedTasks.length) {\n              throw error;\n            }\n          }\n\n          const updatedTaskList = tasks.map(currTask => updatedTasks.find(updTask => updTask.id === currTask.id) || currTask);\n          this.setState({\n            tasks: sortTasksByGroup(updatedTaskList)\n          });\n\n          this._setTasksFetchingState(false);\n        } else {\n          return null;\n        }\n      } else {\n        return null;\n      }\n    };\n\n    this._getAllCompleted = () => {\n      const {\n        tasks\n      } = this.state;\n      const completed = !tasks.some(task => !task.completed);\n      return completed;\n    };\n\n    this._updateNewTaskMessage = event => {\n      this.setState({\n        newTaskMessage: event.target.value\n      });\n    };\n\n    this._updateTasksFilter = event => {\n      const tasksFilter = event.target.value.toLowerCase();\n      this.setState({\n        tasksFilter\n      });\n    };\n  }\n\n  componentDidMount() {\n    this._fetchTasksAsync();\n  }\n\n  render() {\n    const {\n      tasks,\n      newTaskMessage,\n      isTasksFetching,\n      tasksFilter\n    } = this.state;\n    const filteredTasks = tasks.filter(task => task.message.toLowerCase().includes(tasksFilter));\n    const tasksJSX = filteredTasks.map(task => {\n      return React.createElement(Task, _extends({\n        key: task.id\n      }, task, {\n        _removeTaskAsync: this._removeTaskAsync,\n        _updateTaskAsync: this._updateTaskAsync\n      }));\n    });\n    return React.createElement(React.Fragment, null, React.createElement(Spinner, {\n      isSpinning: isTasksFetching\n    }), React.createElement(\"section\", {\n      className: Styles.scheduler\n    }, React.createElement(\"main\", null, React.createElement(\"header\", null, React.createElement(\"h1\", null, \"\\u041F\\u043B\\u0430\\u043D\\u0438\\u0440\\u043E\\u0432\\u0449\\u0438\\u043A \\u0437\\u0430\\u0434\\u0430\\u0447\"), React.createElement(\"input\", {\n      placeholder: \"\\u041F\\u043E\\u0438\\u0441\\u043A\",\n      type: \"search\",\n      value: tasksFilter,\n      onChange: this._updateTasksFilter\n    })), React.createElement(\"section\", null, React.createElement(\"form\", {\n      onSubmit: this._createTaskAsync\n    }, React.createElement(\"input\", {\n      maxLength: 50,\n      placeholder: \"\\u041E\\u043F\\u0438\\u0441\\u0430\\u043D\\u0438\\u0435 \\u043D\\u043E\\u0432\\u043E\\u0439 \\u0437\\u0430\\u0434\\u0430\\u0447\\u0438\",\n      type: \"text\",\n      value: newTaskMessage,\n      onChange: this._updateNewTaskMessage\n    }), React.createElement(\"button\", {\n      onClick: this._createTaskAsync\n    }, \"\\u0414\\u043E\\u0431\\u0430\\u0432\\u0438\\u0442\\u044C \\u0437\\u0430\\u0434\\u0430\\u0447\\u0443\")), React.createElement(\"div\", null, React.createElement(\"ul\", null, tasksJSX))), React.createElement(\"footer\", null, React.createElement(Checkbox, {\n      inlineBlock: true,\n      checked: !tasks.some(task => !task.completed),\n      className: Styles.toggleTaskFavoriteState,\n      color1: \"#000\",\n      color2: \"#fff\",\n      onClick: this._completeAllTasksAsync\n    }), React.createElement(\"span\", {\n      className: Styles.completeAllTasks\n    }, \"\\u0412\\u0441\\u0435 \\u0437\\u0430\\u0434\\u0430\\u0447\\u0438 \\u0432\\u044B\\u043F\\u043E\\u043B\\u043D\\u0435\\u043D\\u044B\")))));\n  }\n\n}"
         },
         {
           "id": null,
@@ -6692,7 +6710,7 @@
               "moduleName": "./source/components/Scheduler/index.js",
               "type": "harmony import specifier",
               "userRequest": "../../instruments",
-              "loc": "47:17-33"
+              "loc": "56:17-33"
             },
             {
               "moduleId": null,
@@ -6701,7 +6719,7 @@
               "moduleName": "./source/components/Scheduler/index.js",
               "type": "harmony import specifier",
               "userRequest": "../../instruments",
-              "loc": "61:15-31"
+              "loc": "70:15-31"
             },
             {
               "moduleId": null,
@@ -6710,7 +6728,7 @@
               "moduleName": "./source/components/Scheduler/index.js",
               "type": "harmony import specifier",
               "userRequest": "../../instruments",
-              "loc": "77:17-33"
+              "loc": "95:17-33"
             },
             {
               "moduleId": null,
@@ -6728,7 +6746,7 @@
               "moduleName": "./source/components/Scheduler/index.js",
               "type": "harmony import specifier",
               "userRequest": "../../instruments",
-              "loc": "111:19-35"
+              "loc": "138:19-35"
             }
           ],
           "usedExports": [
@@ -6810,7 +6828,7 @@
               "moduleName": "./source/components/Task/index.js",
               "type": "harmony import specifier",
               "userRequest": "../../theme/assets/Checkbox",
-              "loc": "149:27-35"
+              "loc": "161:27-35"
             },
             {
               "moduleId": null,
@@ -6819,7 +6837,7 @@
               "moduleName": "./source/components/Scheduler/index.js",
               "type": "harmony import specifier",
               "userRequest": "../../theme/assets/Checkbox",
-              "loc": "184:232-240"
+              "loc": "211:232-240"
             }
           ],
           "usedExports": [
@@ -6839,7 +6857,7 @@
           "name": "./source/components/Task/index.js",
           "index": 14,
           "index2": 32,
-          "size": 4747,
+          "size": 4813,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -6888,7 +6906,7 @@
               "moduleName": "./source/components/Scheduler/index.js",
               "type": "harmony import specifier",
               "userRequest": "../Task",
-              "loc": "158:33-37"
+              "loc": "185:33-37"
             }
           ],
           "usedExports": [
@@ -6900,7 +6918,7 @@
           "optimizationBailout": [
           ],
           "depth": 3,
-          "source": "// Core\nimport React, { PureComponent } from 'react'; // Components\n\nimport Checkbox from '../../theme/assets/Checkbox';\nimport Star from '../../theme/assets/Star';\nimport Edit from '../../theme/assets/Edit';\nimport Remove from '../../theme/assets/Remove'; // Instruments\n\nimport Styles from './styles.m.css';\nexport default class Task extends PureComponent {\n  constructor(props) {\n    super(props);\n\n    this._getTaskShape = ({\n      id = this.props.id,\n      completed = this.props.completed,\n      favorite = this.props.favorite,\n      message = this.props.message\n    }) => ({\n      id,\n      completed,\n      favorite,\n      message\n    });\n\n    this._toggleTaskCompletedState = () => {\n      this.setState((state, {\n        completed\n      }) => ({\n        completed: !completed\n      }), this._updateTask);\n    };\n\n    this._toggleTaskFavoriteState = () => {\n      this.setState((state, {\n        favorite\n      }) => ({\n        favorite: !favorite\n      }), this._updateTask);\n    };\n\n    this._updateNewTaskMessage = event => {\n      this.setState({\n        newTaskMessage: event.target.value\n      });\n    };\n\n    this._setTaskEditingState = () => {\n      // A fallback option in case of esc press\n      // or second task edit toggle\n      if (!this.state.isTaskEditing) {\n        this.savedMessage = this.props.message;\n      }\n\n      this.setState(({\n        isTaskEditing\n      }) => {\n        if (isTaskEditing) {\n          return {\n            isTaskEditing: !isTaskEditing,\n            newTaskMessage: this.savedMessage\n          };\n        }\n\n        return {\n          isTaskEditing: !isTaskEditing\n        };\n      }, this._setTaskInputFocus);\n    };\n\n    this._handleInputDoubleClick = () => {\n      if (!this.state.isTaskEditing) {\n        this._setTaskEditingState();\n      }\n    };\n\n    this._updateTaskMessageOnKeyDown = event => {\n      const enterKeyPressed = event.key === 'Enter' || event.keyCode === 13;\n      const escapeKeyPressed = event.key === 'Escape' || event.keyCode === 27;\n\n      if (enterKeyPressed) {\n        this.setState(({\n          isTaskEditing,\n          newTaskMessage\n        }) => ({\n          message: newTaskMessage,\n          isTaskEditing: !isTaskEditing\n        }), this._updateTask);\n      }\n\n      if (escapeKeyPressed) {\n        this._cancelUpdatingTaskMessage();\n      }\n    };\n\n    this._updateTaskMessageOnClick = () => {};\n\n    this._cancelUpdatingTaskMessage = () => {\n      this.setState(({\n        isTaskEditing\n      }) => ({\n        newTaskMessage: this.savedMessage,\n        isTaskEditing: !isTaskEditing\n      }));\n    };\n\n    this._setTaskInputFocus = () => {\n      this.taskInput.focus();\n    };\n\n    this._updateTask = () => {\n      const taskState = this._getTaskShape(this.state);\n\n      const {\n        _updateTaskAsync\n      } = this.props;\n\n      _updateTaskAsync([taskState]);\n    };\n\n    this._removeTask = () => {\n      const {\n        id,\n        _removeTaskAsync\n      } = this.props;\n\n      _removeTaskAsync(id);\n    };\n\n    this.state = {\n      isTaskEditing: false,\n      newTaskMessage: props.message\n    };\n  }\n\n  render() {\n    const {\n      completed,\n      favorite\n    } = this.props;\n    const {\n      isTaskEditing,\n      newTaskMessage\n    } = this.state;\n    return React.createElement(\"li\", {\n      className: completed ? `${Styles.task} ${Styles.completed}` : Styles.task\n    }, React.createElement(\"div\", {\n      className: Styles.content\n    }, React.createElement(Checkbox, {\n      inlineBlock: true,\n      checked: completed,\n      className: Styles.toggleTaskCompletedState,\n      color1: \"#3B8EF3\",\n      color2: \"#fff\",\n      onClick: this._toggleTaskCompletedState\n    }), React.createElement(\"div\", {\n      onDoubleClick: this._handleInputDoubleClick\n    }, React.createElement(\"input\", {\n      disabled: !isTaskEditing,\n      maxLength: \"50\",\n      ref: input => {\n        this.taskInput = input;\n      },\n      type: \"text\",\n      value: newTaskMessage,\n      onChange: this._updateNewTaskMessage,\n      onKeyDown: this._updateTaskMessageOnKeyDown\n    }))), React.createElement(\"div\", {\n      className: Styles.actions\n    }, React.createElement(Star, {\n      inlineBlock: true,\n      checked: favorite,\n      className: Styles.toggleTaskFavoriteState,\n      color1: \"#3B8EF3\",\n      color2: \"#000\",\n      onClick: this._toggleTaskFavoriteState\n    }), React.createElement(Edit, {\n      inlineBlock: true,\n      className: Styles.updateTaskMessageOnClick,\n      color1: \"#3B8EF3\",\n      color2: \"#000\",\n      onClick: this._setTaskEditingState\n    }), React.createElement(Remove, {\n      inlineBlock: true,\n      className: Styles.removeTask,\n      color1: \"#3B8EF3\",\n      color2: \"#000\",\n      onClick: this._removeTask\n    })));\n  }\n\n}"
+          "source": "// Core\nimport React, { PureComponent } from 'react'; // Components\n\nimport Checkbox from '../../theme/assets/Checkbox';\nimport Star from '../../theme/assets/Star';\nimport Edit from '../../theme/assets/Edit';\nimport Remove from '../../theme/assets/Remove'; // Instruments\n\nimport Styles from './styles.m.css';\nexport default class Task extends PureComponent {\n  constructor(...args) {\n    super(...args);\n    this.state = {\n      isTaskEditing: false,\n      newMessage: this.props.message\n    };\n    this.taskInput = React.createRef();\n\n    this._getTaskShape = ({\n      id = this.props.id,\n      completed = this.props.completed,\n      favorite = this.props.favorite,\n      message = this.props.message\n    }) => ({\n      id,\n      completed,\n      favorite,\n      message\n    });\n\n    this._toggleTaskCompletedState = () => {\n      const {\n        completed,\n        _updateTaskAsync\n      } = this.props;\n\n      _updateTaskAsync(this._getTaskShape({\n        completed: !completed\n      }));\n    };\n\n    this._toggleTaskFavoriteState = () => {\n      const {\n        favorite,\n        _updateTaskAsync\n      } = this.props;\n\n      _updateTaskAsync(this._getTaskShape({\n        favorite: !favorite\n      }));\n    };\n\n    this._updateNewTaskMessage = event => {\n      this.setState({\n        newMessage: event.target.value\n      });\n    };\n\n    this._setTaskEditingState = editState => {\n      if (editState) {\n        this.setState({\n          isTaskEditing: true\n        }, this._setTaskInputFocus);\n      } else {\n        this.setState({\n          isTaskEditing: false\n        });\n      }\n    };\n\n    this._handleInputDoubleClick = () => {\n      if (!this.state.isTaskEditing) {\n        this._setTaskEditingState(true);\n      }\n    };\n\n    this._updateTaskMessageOnKeyDown = event => {\n      const enterKeyPressed = event.key === 'Enter' || event.keyCode === 13;\n      const escapeKeyPressed = event.key === 'Escape' || event.keyCode === 27;\n\n      if (enterKeyPressed) {\n        if (this.state.newMessage) {\n          this._updateTask();\n        } else {\n          return null;\n        }\n      }\n\n      if (escapeKeyPressed) {\n        this._cancelUpdatingTaskMessage();\n      }\n    };\n\n    this._updateTaskMessageOnClick = () => {\n      const {\n        isTaskEditing\n      } = this.state;\n\n      if (isTaskEditing) {\n        this._updateTask();\n\n        return null;\n      }\n\n      this._setTaskEditingState(true);\n    };\n\n    this._cancelUpdatingTaskMessage = () => {\n      this.setState({\n        newMessage: this.props.message,\n        isTaskEditing: false\n      });\n    };\n\n    this._setTaskInputFocus = () => {\n      this.taskInput.current.focus();\n    };\n\n    this._updateTask = () => {\n      const {\n        message,\n        _updateTaskAsync\n      } = this.props;\n\n      if (this.state.newMessage !== message) {\n        _updateTaskAsync(this._getTaskShape({\n          message: this.state.newMessage\n        }));\n\n        this._setTaskEditingState(false);\n      } else {\n        this._setTaskEditingState(false);\n\n        return null;\n      }\n    };\n\n    this._removeTask = () => {\n      const {\n        id,\n        _removeTaskAsync\n      } = this.props;\n\n      _removeTaskAsync(id);\n    };\n  }\n\n  render() {\n    const {\n      completed,\n      favorite\n    } = this.props;\n    const {\n      isTaskEditing,\n      newMessage\n    } = this.state;\n    return React.createElement(\"li\", {\n      className: completed ? `${Styles.task} ${Styles.completed}` : Styles.task\n    }, React.createElement(\"div\", {\n      className: Styles.content\n    }, React.createElement(Checkbox, {\n      inlineBlock: true,\n      checked: completed,\n      className: Styles.toggleTaskCompletedState,\n      color1: \"#3B8EF3\",\n      color2: \"#fff\",\n      onClick: this._toggleTaskCompletedState\n    }), React.createElement(\"div\", {\n      onDoubleClick: this._handleInputDoubleClick\n    }, React.createElement(\"input\", {\n      disabled: !isTaskEditing,\n      maxLength: \"50\",\n      ref: this.taskInput,\n      type: \"text\",\n      value: newMessage,\n      onChange: this._updateNewTaskMessage,\n      onKeyDown: this._updateTaskMessageOnKeyDown\n    }))), React.createElement(\"div\", {\n      className: Styles.actions\n    }, React.createElement(Star, {\n      inlineBlock: true,\n      checked: favorite,\n      className: Styles.toggleTaskFavoriteState,\n      color1: \"#3B8EF3\",\n      color2: \"#000\",\n      onClick: this._toggleTaskFavoriteState\n    }), React.createElement(Edit, {\n      inlineBlock: true,\n      className: Styles.updateTaskMessageOnClick,\n      color1: \"#3B8EF3\",\n      color2: \"#000\",\n      onClick: this._updateTaskMessageOnClick\n    }), React.createElement(Remove, {\n      inlineBlock: true,\n      className: Styles.removeTask,\n      color1: \"#3B8EF3\",\n      color2: \"#000\",\n      onClick: this._removeTask\n    })));\n  }\n\n}"
         },
         {
           "id": null,
@@ -6957,7 +6975,7 @@
               "moduleName": "./source/components/Scheduler/index.js",
               "type": "harmony import specifier",
               "userRequest": "../Spinner",
-              "loc": "165:73-80"
+              "loc": "192:73-80"
             }
           ],
           "usedExports": [
@@ -7026,7 +7044,7 @@
               "moduleName": "./source/components/Scheduler/index.js",
               "type": "harmony import specifier",
               "userRequest": "../../REST",
-              "loc": "42:27-30"
+              "loc": "45:23-26"
             },
             {
               "moduleId": null,
@@ -7035,7 +7053,7 @@
               "moduleName": "./source/components/Scheduler/index.js",
               "type": "harmony import specifier",
               "userRequest": "../../REST",
-              "loc": "59:26-29"
+              "loc": "68:26-29"
             },
             {
               "moduleId": null,
@@ -7044,7 +7062,7 @@
               "moduleName": "./source/components/Scheduler/index.js",
               "type": "harmony import specifier",
               "userRequest": "../../REST",
-              "loc": "70:32-35"
+              "loc": "82:28-31"
             },
             {
               "moduleId": null,
@@ -7053,7 +7071,7 @@
               "moduleName": "./source/components/Scheduler/index.js",
               "type": "harmony import specifier",
               "userRequest": "../../REST",
-              "loc": "87:12-15"
+              "loc": "105:12-15"
             },
             {
               "moduleId": null,
@@ -7062,7 +7080,7 @@
               "moduleName": "./source/components/Scheduler/index.js",
               "type": "harmony import specifier",
               "userRequest": "../../REST",
-              "loc": "108:37-40"
+              "loc": "129:33-36"
             }
           ],
           "usedExports": [
@@ -7257,15 +7275,6 @@
             },
             {
               "moduleId": null,
-              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/theme/assets/Edit.js",
-              "module": "./source/theme/assets/Edit.js",
-              "moduleName": "./source/theme/assets/Edit.js",
-              "type": "harmony side effect evaluation",
-              "userRequest": "instruments/withSvg",
-              "loc": "4:0-46"
-            },
-            {
-              "moduleId": null,
               "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/theme/assets/Star.js",
               "module": "./source/theme/assets/Star.js",
               "moduleName": "./source/theme/assets/Star.js",
@@ -7281,6 +7290,15 @@
               "type": "harmony side effect evaluation",
               "userRequest": "../../instruments/withSvg",
               "loc": "4:0-52"
+            },
+            {
+              "moduleId": null,
+              "moduleIdentifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/theme/assets/Edit.js",
+              "module": "./source/theme/assets/Edit.js",
+              "moduleName": "./source/theme/assets/Edit.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "instruments/withSvg",
+              "loc": "4:0-46"
             },
             {
               "moduleId": null,
@@ -7390,7 +7408,7 @@
               "moduleName": "./source/components/Task/index.js",
               "type": "harmony import specifier",
               "userRequest": "../../theme/assets/Star",
-              "loc": "170:27-31"
+              "loc": "180:27-31"
             }
           ],
           "usedExports": [
@@ -7464,7 +7482,7 @@
               "moduleName": "./source/components/Task/index.js",
               "type": "harmony import specifier",
               "userRequest": "../../theme/assets/Edit",
-              "loc": "177:28-32"
+              "loc": "187:28-32"
             }
           ],
           "usedExports": [
@@ -7538,7 +7556,7 @@
               "moduleName": "./source/components/Task/index.js",
               "type": "harmony import specifier",
               "userRequest": "../../theme/assets/Remove",
-              "loc": "183:28-34"
+              "loc": "193:28-34"
             }
           ],
           "usedExports": [
@@ -7743,7 +7761,7 @@
           "name": "./source/REST/api.js",
           "index": 43,
           "index2": 39,
-          "size": 1783,
+          "size": 1785,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -7809,7 +7827,7 @@
           "optimizationBailout": [
           ],
           "depth": 4,
-          "source": "import { MAIN_URL, TOKEN } from './config';\nimport { BaseTaskModel } from '../instruments/helpers';\nimport { v4 } from 'uuid';\nexport const api = {\n  createTask: async newTaskMessage => {\n    const newTask = new BaseTaskModel(v4(), false, false, newTaskMessage);\n    const response = await fetch(MAIN_URL, {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json',\n        Authorization: TOKEN\n      },\n      body: JSON.stringify(newTask)\n    });\n    const {\n      data: task\n    } = await response.json();\n    return task;\n  },\n  fetchTasks: async () => {\n    const response = await fetch(MAIN_URL, {\n      method: 'GET',\n      headers: {\n        Authorization: TOKEN\n      }\n    });\n    const {\n      data: tasks\n    } = await response.json();\n    return tasks;\n  },\n  updateTask: async oldTask => {\n    const response = await fetch(MAIN_URL, {\n      method: 'PUT',\n      headers: {\n        'Content-Type': 'application/json',\n        Authorization: TOKEN\n      },\n      body: JSON.stringify(oldTask)\n    });\n    const {\n      data: tasks\n    } = await response.json();\n    return tasks;\n  },\n  removeTask: async id => {\n    const deleteUrl = `${MAIN_URL}/${id}`;\n    await fetch(deleteUrl, {\n      method: 'DELETE',\n      headers: {\n        Authorization: TOKEN\n      }\n    });\n  },\n  completeAllTasks: async oldTasks => {\n    const requests = oldTasks.map(task => fetch(MAIN_URL, {\n      method: 'PUT',\n      headers: {\n        'Content-Type': 'application/json',\n        Authorization: TOKEN\n      },\n      body: JSON.stringify([task])\n    }));\n    const tasks = await Promise.all(requests).then(responses => Promise.all(responses.map(r => r.json()))).then(result => result.map(r => r.data));\n    return tasks.reduce((a1, a2) => [...a1, ...a2]);\n  }\n};"
+          "source": "import { MAIN_URL, TOKEN } from './config';\nimport { BaseTaskModel } from '../instruments/helpers';\nimport { v4 } from 'uuid';\nexport const api = {\n  createTask: async newTaskMessage => {\n    const newTask = new BaseTaskModel(v4(), false, false, newTaskMessage);\n    const response = await fetch(MAIN_URL, {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json',\n        Authorization: TOKEN\n      },\n      body: JSON.stringify(newTask)\n    });\n    const {\n      data: task\n    } = await response.json();\n    return task;\n  },\n  fetchTasks: async () => {\n    const response = await fetch(MAIN_URL, {\n      method: 'GET',\n      headers: {\n        Authorization: TOKEN\n      }\n    });\n    const {\n      data: tasks\n    } = await response.json();\n    return tasks;\n  },\n  updateTask: async oldTask => {\n    const response = await fetch(MAIN_URL, {\n      method: 'PUT',\n      headers: {\n        'Content-Type': 'application/json',\n        Authorization: TOKEN\n      },\n      body: JSON.stringify([oldTask])\n    });\n    const {\n      data: tasks\n    } = await response.json();\n    return tasks;\n  },\n  removeTask: async id => {\n    const deleteUrl = `${MAIN_URL}/${id}`;\n    await fetch(deleteUrl, {\n      method: 'DELETE',\n      headers: {\n        Authorization: TOKEN\n      }\n    });\n  },\n  completeAllTasks: async oldTasks => {\n    const requests = oldTasks.map(task => fetch(MAIN_URL, {\n      method: 'PUT',\n      headers: {\n        'Content-Type': 'application/json',\n        Authorization: TOKEN\n      },\n      body: JSON.stringify([task])\n    }));\n    const tasks = await Promise.all(requests).then(responses => Promise.all(responses.map(r => r.json()))).then(result => result.map(r => r.data).reduce((a1, a2) => [...a1, ...a2]));\n    return tasks;\n  }\n};"
         }
       ],
       "filteredModules": 0
@@ -8583,13 +8601,13 @@
         },
         {
           "id": null,
-          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/index.js",
-          "name": "./source/REST/index.js"
+          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/index.js",
+          "name": "./source/instruments/index.js"
         },
         {
           "id": null,
-          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/api.js",
-          "name": "./source/REST/api.js"
+          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/helpers.js",
+          "name": "./source/instruments/helpers.js"
         },
         {
           "id": 3,
@@ -8656,13 +8674,13 @@
         },
         {
           "id": null,
-          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/index.js",
-          "name": "./source/REST/index.js"
+          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/index.js",
+          "name": "./source/instruments/index.js"
         },
         {
           "id": null,
-          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/REST/api.js",
-          "name": "./source/REST/api.js"
+          "identifier": "/Users/november_kilo/Lectrum/react-personal-project/node_modules/babel-loader/lib/index.js!/Users/november_kilo/Lectrum/react-personal-project/source/instruments/helpers.js",
+          "name": "./source/instruments/helpers.js"
         },
         {
           "id": 3,
@@ -8998,7 +9016,7 @@
       },
       "assets": [
         {
-          "name": "iconstats-b7d0f484bf030436821a.json",
+          "name": "iconstats-6a9a31bed43b8c5a22e9.json",
           "size": 8437,
           "chunks": [
             0
@@ -9374,7 +9392,7 @@
             0
           ],
           "assets": [
-            "iconstats-b7d0f484bf030436821a.json"
+            "iconstats-6a9a31bed43b8c5a22e9.json"
           ],
           "children": {
           },
@@ -9388,7 +9406,7 @@
             0
           ],
           "assets": [
-            "iconstats-b7d0f484bf030436821a.json"
+            "iconstats-6a9a31bed43b8c5a22e9.json"
           ],
           "children": {
           },
@@ -9406,9 +9424,9 @@
           "names": [
           ],
           "files": [
-            "iconstats-b7d0f484bf030436821a.json"
+            "iconstats-6a9a31bed43b8c5a22e9.json"
           ],
-          "hash": "aeeda1ba7a8581050405",
+          "hash": "a7bfbb1ea886688f7810",
           "siblings": [
           ],
           "parents": [
@@ -9440,43 +9458,43 @@
               "errors": 0,
               "warnings": 0,
               "assets": [
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-96x96.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-144x144.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-72x72.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-256x256.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-48x48.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-192x192.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-384x384.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-36x36.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-512x512.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-180x180.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-60x60.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-167x167.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-152x152.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-57x57.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-precomposed.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-120x120.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-76x76.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-114x114.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-72x72.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-144x144.png",
                 "images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-32x32.png",
                 "images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-16x16.png",
                 "images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon.ico",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-152x152.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-167x167.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-60x60.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-precomposed.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-72x72.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-76x76.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-114x114.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-144x144.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-120x120.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-57x57.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-180x180.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-256x256.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-72x72.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-192x192.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-48x48.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-144x144.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-384x384.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-36x36.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-96x96.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-512x512.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1496x2048.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-320x460.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-750x1294.png",
                 "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1182x2208.png",
                 "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x1096.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-320x460.png",
                 "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x920.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-750x1294.png",
                 "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-768x1004.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1536x2008.png",
                 "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-748x1024.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1536x2008.png",
                 "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1242x2148.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_128x128.png",
-                "images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_512x512.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1496x2048.png",
                 "images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_60x60.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_512x512.png",
+                "images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_128x128.png",
                 "images/favicon/icon-c566bb626c9412aec2582936a79e3196manifest.json",
                 "images/favicon/icon-c566bb626c9412aec2582936a79e3196manifest.webapp",
                 "images/favicon/icon-c566bb626c9412aec2582936a79e3196.cache"
@@ -9497,7 +9515,7 @@
                 "ModuleConcatenation bailout: Module is not an ECMAScript module"
               ],
               "depth": 0,
-              "source": "module.exports = {\"outputFilePrefix\":\"images/favicon/icon-c566bb626c9412aec2582936a79e3196\",\"html\":[\"<link rel=\\\"icon\\\" type=\\\"image/png\\\" sizes=\\\"32x32\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-32x32.png\\\">\",\"<link rel=\\\"icon\\\" type=\\\"image/png\\\" sizes=\\\"16x16\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-16x16.png\\\">\",\"<link rel=\\\"shortcut icon\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon.ico\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"57x57\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-57x57.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"60x60\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-60x60.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"72x72\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-72x72.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"76x76\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-76x76.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"114x114\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-114x114.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"120x120\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-120x120.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"144x144\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-144x144.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"152x152\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-152x152.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"180x180\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-180x180.png\\\">\",\"<meta name=\\\"apple-mobile-web-app-capable\\\" content=\\\"yes\\\">\",\"<meta name=\\\"apple-mobile-web-app-status-bar-style\\\" content=\\\"black-translucent\\\">\",\"<meta name=\\\"apple-mobile-web-app-title\\\" content=\\\"react-personal-project\\\">\",\"<meta name=\\\"mobile-web-app-capable\\\" content=\\\"yes\\\">\",\"<meta name=\\\"theme-color\\\" content=\\\"#fff\\\">\",\"<meta name=\\\"application-name\\\" content=\\\"react-personal-project\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-320x460.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x920.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x1096.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-750x1294.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1182x2208.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1242x2148.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-748x1024.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-768x1004.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1496x2048.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1536x2008.png\\\">\"],\"files\":[\"images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-32x32.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-16x16.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon.ico\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-152x152.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-167x167.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-60x60.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-precomposed.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-72x72.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-76x76.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-114x114.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-144x144.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-120x120.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-57x57.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-180x180.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-256x256.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-72x72.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-192x192.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-48x48.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-144x144.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-384x384.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-36x36.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-96x96.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-512x512.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1496x2048.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-320x460.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-750x1294.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1182x2208.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x1096.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x920.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-768x1004.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1536x2008.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-748x1024.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1242x2148.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_128x128.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_512x512.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_60x60.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196manifest.json\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196manifest.webapp\"]}"
+              "source": "module.exports = {\"outputFilePrefix\":\"images/favicon/icon-c566bb626c9412aec2582936a79e3196\",\"html\":[\"<meta name=\\\"mobile-web-app-capable\\\" content=\\\"yes\\\">\",\"<meta name=\\\"theme-color\\\" content=\\\"#fff\\\">\",\"<meta name=\\\"application-name\\\" content=\\\"react-personal-project\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"57x57\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-57x57.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"60x60\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-60x60.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"72x72\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-72x72.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"76x76\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-76x76.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"114x114\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-114x114.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"120x120\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-120x120.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"144x144\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-144x144.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"152x152\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-152x152.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"180x180\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-180x180.png\\\">\",\"<meta name=\\\"apple-mobile-web-app-capable\\\" content=\\\"yes\\\">\",\"<meta name=\\\"apple-mobile-web-app-status-bar-style\\\" content=\\\"black-translucent\\\">\",\"<meta name=\\\"apple-mobile-web-app-title\\\" content=\\\"react-personal-project\\\">\",\"<link rel=\\\"icon\\\" type=\\\"image/png\\\" sizes=\\\"32x32\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-32x32.png\\\">\",\"<link rel=\\\"icon\\\" type=\\\"image/png\\\" sizes=\\\"16x16\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-16x16.png\\\">\",\"<link rel=\\\"shortcut icon\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon.ico\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-320x460.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x920.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x1096.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-750x1294.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1182x2208.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1242x2148.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-748x1024.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-768x1004.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1496x2048.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1536x2008.png\\\">\"],\"files\":[\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-96x96.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-144x144.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-72x72.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-256x256.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-48x48.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-192x192.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-384x384.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-36x36.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-512x512.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-180x180.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-60x60.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-167x167.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-152x152.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-57x57.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-precomposed.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-120x120.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-76x76.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-114x114.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-72x72.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-144x144.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-32x32.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-16x16.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon.ico\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1182x2208.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x1096.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-320x460.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x920.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-750x1294.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-768x1004.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-748x1024.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1536x2008.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1242x2148.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1496x2048.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_60x60.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_512x512.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_128x128.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196manifest.json\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196manifest.webapp\"]}"
             }
           ],
           "filteredModules": 0,
@@ -9537,43 +9555,43 @@
           "errors": 0,
           "warnings": 0,
           "assets": [
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-96x96.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-144x144.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-72x72.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-256x256.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-48x48.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-192x192.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-384x384.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-36x36.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-512x512.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-180x180.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-60x60.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-167x167.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-152x152.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-57x57.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-precomposed.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-120x120.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-76x76.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-114x114.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-72x72.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-144x144.png",
             "images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-32x32.png",
             "images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-16x16.png",
             "images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon.ico",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-152x152.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-167x167.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-60x60.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-precomposed.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-72x72.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-76x76.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-114x114.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-144x144.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-120x120.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-57x57.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-180x180.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-256x256.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-72x72.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-192x192.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-48x48.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-144x144.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-384x384.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-36x36.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-96x96.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-512x512.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1496x2048.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-320x460.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-750x1294.png",
             "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1182x2208.png",
             "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x1096.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-320x460.png",
             "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x920.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-750x1294.png",
             "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-768x1004.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1536x2008.png",
             "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-748x1024.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1536x2008.png",
             "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1242x2148.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_128x128.png",
-            "images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_512x512.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1496x2048.png",
             "images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_60x60.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_512x512.png",
+            "images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_128x128.png",
             "images/favicon/icon-c566bb626c9412aec2582936a79e3196manifest.json",
             "images/favicon/icon-c566bb626c9412aec2582936a79e3196manifest.webapp",
             "images/favicon/icon-c566bb626c9412aec2582936a79e3196.cache"
@@ -9594,7 +9612,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 0,
-          "source": "module.exports = {\"outputFilePrefix\":\"images/favicon/icon-c566bb626c9412aec2582936a79e3196\",\"html\":[\"<link rel=\\\"icon\\\" type=\\\"image/png\\\" sizes=\\\"32x32\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-32x32.png\\\">\",\"<link rel=\\\"icon\\\" type=\\\"image/png\\\" sizes=\\\"16x16\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-16x16.png\\\">\",\"<link rel=\\\"shortcut icon\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon.ico\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"57x57\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-57x57.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"60x60\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-60x60.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"72x72\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-72x72.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"76x76\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-76x76.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"114x114\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-114x114.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"120x120\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-120x120.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"144x144\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-144x144.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"152x152\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-152x152.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"180x180\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-180x180.png\\\">\",\"<meta name=\\\"apple-mobile-web-app-capable\\\" content=\\\"yes\\\">\",\"<meta name=\\\"apple-mobile-web-app-status-bar-style\\\" content=\\\"black-translucent\\\">\",\"<meta name=\\\"apple-mobile-web-app-title\\\" content=\\\"react-personal-project\\\">\",\"<meta name=\\\"mobile-web-app-capable\\\" content=\\\"yes\\\">\",\"<meta name=\\\"theme-color\\\" content=\\\"#fff\\\">\",\"<meta name=\\\"application-name\\\" content=\\\"react-personal-project\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-320x460.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x920.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x1096.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-750x1294.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1182x2208.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1242x2148.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-748x1024.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-768x1004.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1496x2048.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1536x2008.png\\\">\"],\"files\":[\"images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-32x32.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-16x16.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon.ico\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-152x152.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-167x167.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-60x60.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-precomposed.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-72x72.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-76x76.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-114x114.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-144x144.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-120x120.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-57x57.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-180x180.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-256x256.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-72x72.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-192x192.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-48x48.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-144x144.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-384x384.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-36x36.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-96x96.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-512x512.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1496x2048.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-320x460.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-750x1294.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1182x2208.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x1096.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x920.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-768x1004.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1536x2008.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-748x1024.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1242x2148.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_128x128.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_512x512.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_60x60.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196manifest.json\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196manifest.webapp\"]}"
+          "source": "module.exports = {\"outputFilePrefix\":\"images/favicon/icon-c566bb626c9412aec2582936a79e3196\",\"html\":[\"<meta name=\\\"mobile-web-app-capable\\\" content=\\\"yes\\\">\",\"<meta name=\\\"theme-color\\\" content=\\\"#fff\\\">\",\"<meta name=\\\"application-name\\\" content=\\\"react-personal-project\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"57x57\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-57x57.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"60x60\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-60x60.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"72x72\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-72x72.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"76x76\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-76x76.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"114x114\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-114x114.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"120x120\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-120x120.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"144x144\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-144x144.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"152x152\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-152x152.png\\\">\",\"<link rel=\\\"apple-touch-icon\\\" sizes=\\\"180x180\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-180x180.png\\\">\",\"<meta name=\\\"apple-mobile-web-app-capable\\\" content=\\\"yes\\\">\",\"<meta name=\\\"apple-mobile-web-app-status-bar-style\\\" content=\\\"black-translucent\\\">\",\"<meta name=\\\"apple-mobile-web-app-title\\\" content=\\\"react-personal-project\\\">\",\"<link rel=\\\"icon\\\" type=\\\"image/png\\\" sizes=\\\"32x32\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-32x32.png\\\">\",\"<link rel=\\\"icon\\\" type=\\\"image/png\\\" sizes=\\\"16x16\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-16x16.png\\\">\",\"<link rel=\\\"shortcut icon\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon.ico\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-320x460.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x920.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x1096.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-750x1294.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1182x2208.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1242x2148.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-748x1024.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-768x1004.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1496x2048.png\\\">\",\"<link rel=\\\"apple-touch-startup-image\\\" media=\\\"(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)\\\" href=\\\"/react-personal-project/images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1536x2008.png\\\">\"],\"files\":[\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-96x96.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-144x144.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-72x72.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-256x256.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-48x48.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-192x192.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-384x384.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-36x36.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196android-chrome-512x512.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-180x180.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-60x60.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-167x167.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-152x152.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-57x57.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-precomposed.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-120x120.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-76x76.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-114x114.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-72x72.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-icon-144x144.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-32x32.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon-16x16.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196favicon.ico\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1182x2208.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x1096.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-320x460.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-640x920.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-750x1294.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-768x1004.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-748x1024.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1536x2008.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1242x2148.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196apple-touch-startup-image-1496x2048.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_60x60.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_512x512.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196firefox_app_128x128.png\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196manifest.json\",\"images/favicon/icon-c566bb626c9412aec2582936a79e3196manifest.webapp\"]}"
         }
       ],
       "filteredModules": 0,
